@@ -1,0 +1,48 @@
+:root{
+    --corPrimaria: #7e2da7;
+    --corEscura: #54236c;
+    --corClara: #ebdcf1;  
+}
+
+.header{
+    padding: 1.5rem 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    .logo{
+        display: flex;
+        color: #fff;
+    }
+
+    .navMenu{
+        ul{
+            display: flex;
+            gap: 3rem;
+            .navItems{
+                a{
+                    position: relative;
+                    color: var(--corEscura);
+                }
+
+                &::after{
+                    content: '';
+                    height: 2px;
+                    width: 0px;
+                    position: absolute;
+                    right: 0;
+                    bottom: -5px;
+                    transition: .3s;
+                }
+
+                &:hover a::after{
+                    width: 100%;
+                    background-color: var(--corPrimaria);
+                }
+            }
+        }
+    }
+}
