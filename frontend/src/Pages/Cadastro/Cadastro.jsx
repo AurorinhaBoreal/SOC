@@ -80,12 +80,12 @@ const Cadastro = () => {
               </div>
               <div className='formInput rmInput'>
                 <BiSolidUser className='icones'/>
-                <input value={login} onChange={(e)=> setLogin(e.target.value)} type="text" name="" id="" placeholder='Login' required/>
+                <input value={login} onChange={(e)=> setLogin(e.target.value)} type="text" name="" id="" placeholder='Login (ex: João123@)' required/>
               </div>
             </div>
             <div className="formInput senhaInput">
               <RiLockPasswordLine className='icones'/>
-              <input value={password} onChange={(e)=> setPassword(e.target.value)} type={mostrarSenha} name="" id="" placeholder='Senha' required/>
+              <input value={password} onChange={(e)=> setPassword(e.target.value)} type={mostrarSenha} name="" id="" placeholder='Senha (min 10)' required/>
             </div>
             <div className="formInput repetirSenhaInput">
               <RiLockPasswordFill className='icones'/>

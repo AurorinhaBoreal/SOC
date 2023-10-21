@@ -37,4 +37,28 @@
 .header .navMenu ul .navItems:hover a::after {
   width: 100%;
   background-color: var(--corPrimaria);
+}
+
+@media screen and (max-width: 1100px) {
+  .header .navMenu ul {
+    display: flex;
+    gap: 3rem;
+  }
+  .header .navMenu ul .navItems a {
+    position: relative;
+    color: var(--corClara);
+  }
+  .header .navMenu ul .navItems::after {
+    content: "";
+    height: 2px;
+    width: 0px;
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    transition: 0.3s;
+  }
+  .header .navMenu ul .navItems:hover a::after {
+    width: 100%;
+    background-color: var(--corClara);
+  }
 }/*# sourceMappingURL=header.css.map */

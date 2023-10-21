@@ -91,4 +91,63 @@
   color: #fff;
   box-shadow: inset 0px 200px 0 var(--corPrimaria);
   transition: 1s;
+}
+
+@media screen and (max-width: 1100px) {
+  .login {
+    background-color: var(--corPrimaria);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .login .info {
+    display: none;
+  }
+  .login .formulario {
+    background-color: var(--corPrimaria);
+    height: 100%;
+  }
+  .login .formulario h1 {
+    color: var(--corClara);
+  }
+  .login .formulario .formLogin {
+    gap: 30px;
+  }
+  .login .formulario .formLogin .formInput {
+    border-radius: 5px;
+  }
+  .login .formulario .formLogin .link {
+    color: var(--corClara);
+    align-self: flex-end;
+    position: relative;
+  }
+  .login .formulario .formLogin .link p {
+    font-size: 0.8rem;
+  }
+  .login .formulario .formLogin .link p::after {
+    content: "";
+    height: 1px;
+    width: 0px;
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    transition: 0.3s;
+  }
+  .login .formulario .formLogin .link:hover p::after {
+    width: 100%;
+    background-color: var(--corClara);
+  }
+  .login .formulario .btnForm {
+    margin-top: 20px;
+    padding: 0.8rem 3rem;
+    border-radius: 10px;
+    font-weight: 600;
+    position: relative;
+  }
+  .login .formulario .btnForm:hover {
+    color: var(--corEscura);
+    box-shadow: inset 0px 200px 0 var(--corClara);
+    transition: 1s;
+  }
 }/*# sourceMappingURL=login.css.map */

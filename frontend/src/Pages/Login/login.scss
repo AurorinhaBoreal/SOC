@@ -111,3 +111,74 @@
         }
     }
 }
+
+@media screen and (max-width: 1100px) {
+    .login{
+        background-color: var(--corPrimaria);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .info{
+            display: none;
+        }
+    
+        .formulario{
+            background-color: var(--corPrimaria);
+            height: 100%;
+
+            h1{
+                color: var(--corClara);
+            }
+            
+            .formLogin{
+                gap: 30px ;
+    
+                .formInput{
+                    border-radius: 5px;
+                }
+
+                .link{
+                    color: var(--corClara);
+                    align-self: flex-end;
+                    position: relative;
+    
+                    p{
+                        font-size: .8rem;
+                    }   
+    
+                    p::after{
+                        content: '';
+                        height: 1px;
+                        width: 0px;
+                        position: absolute;
+                        right: 0;
+                        bottom: -5px;
+                        transition: .3s;
+                    }
+    
+                    &:hover p::after{
+                        width: 100%;
+                        background-color: var(--corClara);
+                    }
+                }
+            }
+
+            .btnForm{
+                margin-top: 20px;
+                padding: .8rem 3rem;
+                border-radius: 10px;
+                font-weight: 600;
+                position: relative;
+               
+    
+                &:hover{
+                    color: var(--corEscura);
+                    box-shadow: inset 0px 200px 0 var(--corClara);
+                    transition: 1s;
+                }
+            }
+        }
+    }
+}
