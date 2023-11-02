@@ -17,7 +17,7 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  padding: 2rem 2rem;
+  padding: 2rem 1rem;
 }
 .home .sideMenu ul {
   display: flex;
@@ -28,6 +28,8 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
 }
 .home .sideMenu .items .itemsIcons {
   color: #fff;
@@ -52,9 +54,10 @@
 }
 .home .sideMenu:hover {
   width: 300px;
+  padding: 2rem 2rem;
 }
 .home .sideMenu:hover .items {
-  width: 100%;
+  width: 200px;
 }
 .home .sideMenu:hover .items .itemsText {
   font-size: 1rem;
