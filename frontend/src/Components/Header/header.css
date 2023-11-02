@@ -30,7 +30,8 @@
   height: 2px;
   width: 0px;
   position: absolute;
-  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: -5px;
   transition: 0.3s;
 }
