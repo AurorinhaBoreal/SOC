@@ -29,6 +29,8 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            padding: .5rem 1rem;
+            border-radius: 10px;
 
             .itemsIcons{
                 color: #fff;
@@ -62,7 +64,7 @@
             width: 300px;
 
             .items{
-                width: 100%;
+                width: 200px;
 
                 .itemsText{
                     font-size: 1rem;
@@ -71,6 +73,7 @@
                 }
             }
         }
+
     }
 
     // .hidden{
