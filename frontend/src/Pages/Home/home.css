@@ -2,4 +2,61 @@
   --corPrimaria: #7e2da7;
   --corEscura: #54236c;
   --corClara: #ebdcf1;
+}
+
+.home {
+  height: 100vh;
+}
+.home .sideMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--corEscura);
+  height: 100%;
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 2rem 2rem;
+}
+.home .sideMenu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.home .sideMenu .items {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.home .sideMenu .items .itemsIcons {
+  color: #fff;
+  font-size: 1.5rem;
+}
+.home .sideMenu .items .itemsText {
+  color: #fff;
+  font-size: 1rem;
+  opacity: 0;
+}
+.home .sideMenu .items:hover {
+  background-color: #fff;
+  width: 100%;
+}
+.home .sideMenu .items:hover .itemsIcons {
+  color: var(--corPrimaria);
+  font-size: 1.5rem;
+}
+.home .sideMenu .items:hover .itemsText {
+  color: var(--corPrimaria);
+  font-size: 1rem;
+}
+.home .sideMenu:hover {
+  width: 300px;
+}
+.home .sideMenu:hover .items {
+  width: 100%;
+}
+.home .sideMenu:hover .items .itemsText {
+  font-size: 1rem;
+  opacity: 1;
 }/*# sourceMappingURL=home.css.map */
