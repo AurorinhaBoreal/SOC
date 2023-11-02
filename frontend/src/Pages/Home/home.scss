@@ -17,7 +17,7 @@
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        padding: 2rem 2rem;
+        padding: 2rem 1rem;
 
         ul{
             display: flex;
@@ -62,6 +62,7 @@
 
         &:hover{
             width: 300px;
+            padding: 2rem 2rem;
 
             .items{
                 width: 200px;
