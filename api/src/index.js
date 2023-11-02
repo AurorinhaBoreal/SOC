@@ -8,6 +8,6 @@ api.use(cors());
 api.use(express.json()); 
 api.use('/', routes);
 
-api.listen(3434, () => {
+api.listen(3333, () => {
   console.log('Socando a API!!!')
 });
