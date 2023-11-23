@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './login.css'
+import '../../css/styles.css'
 import Header from '../../Components/Header/Header'
 
 import { PiBarcodeBold } from 'react-icons/pi'
@@ -8,6 +8,8 @@ import { RiLockPasswordLine } from 'react-icons/ri'
 import { GrFormView } from 'react-icons/gr'
 import { GrFormViewHide } from 'react-icons/gr'
 import { Link } from 'react-router-dom'
+
+import { FaGithub } from "react-icons/fa";
 
 const Login = () => {
 
@@ -18,7 +20,7 @@ const Login = () => {
     setMostrarSenha("text")
     setSenhaView(<GrFormView className='icones'/>)
 
-    if(mostrarSenha === "text"){
+    if(mostrarSenha == "text"){
       setMostrarSenha("password")
       setSenhaView(<GrFormViewHide className='icones'/>)
     }
@@ -27,31 +29,47 @@ const Login = () => {
   return (
     <div className='login'>
         <Header/>
-        <div className='info flex'>
-          <h1>Bem-vindo ao SOC</h1>
-          <h4>O sistema organizador de cronogramas(SOC) é uma ideia de TCC Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi neque, quo eum iure accusantium molestiae repellat ea ipsam distinctio soluta possimus ullam, nisi tempore rem labore, earum dolorum! Atque, accusantium!</h4>
-        </div>
-        <div className='formulario flex'>
+        <div className='form flex'>
           <h1>login</h1>
-          <form className='formLogin flex'>
-            <div className='impInfo'>
-              <div className='formInput codInput'>
+          <form className='flex'>
+            <div className='input-wrapper'>
+              <div className='form-input input-cod'>
                 <PiBarcodeBold className='icones'/>
-                <input type="text" name="" id="" placeholder='Cód. ETEC'/>
+                <div className='input'>
+                  <input type="text" name="" id="" required/>
+                  <p>Cód. ETEC</p>
+                </div>             
               </div>
-              <div className='formInput rmInput'>
+              <div className='form-input input-login'>
                 <BiSolidUser className='icones'/>
-                <input type="text" name="" id="" placeholder='Login'/>
+                <div className="input">
+                  <input type="text" name="" id="" required/>
+                  <p>Nome Usuário</p>
+                </div>
               </div>
             </div>
-            <div className="formInput senhaInput">
+            <div className="form-input input-senha">
               <RiLockPasswordLine className='icones'/>
-              <input type={mostrarSenha} name="" id="" placeholder='Senha'/>
+              <div className="input">
+                <input type={mostrarSenha} name="" id="" required/>
+                <p>Senha</p>
+              </div>
               <button className='btnTransparente' onClick={verSenha} type="button">{senhaView}</button>
             </div>
             <Link className="link" to="/cadastro"><p>Não tem uma conta? Crie agora mesmo</p></Link>
-            <button className='btnForm'>Entrar</button>
+            <button className='form-btn'>Entrar</button>
           </form>
+          <div className="extra flex">
+            <div className="hr">
+              <hr />
+              <p>Conheça mais</p>
+            </div>
+            <div className="link-extra">
+              <a target="_blank" href="https://github.com/AurorinhaBoreal/SOC">
+                <FaGithub className='link-icon'/>
+              </a>
+            </div>
+          </div>
         </div>
     </div>
   )

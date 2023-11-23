@@ -1,83 +1,56 @@
-:root{
-    --corPrimaria: #7e2da7;
-    --corEscura: #54236c;
-    --corClara: #ebdcf1;  
-}
+$corPrimaria: #7e2da7;
+$corEscura: #54236c;
+$corClara: #ebdcf1;  
+$corRosa: #e53f71;
+$corBranco: #fff;
+$degrade: linear-gradient(to left, #7e2da7, #e53f71);
 
 .home{
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
 
-    .sideMenu{
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: var(--corEscura);
-        height: 100%;
-        width: 100px;
+    .aside{
         display: flex;
-        justify-content: space-between;
         flex-direction: column;
-        padding: 2rem 1rem;
+        gap: 40px;
+        padding: 1.5rem 1rem;
+        border-right: 1px solid #444;
+
+        h1{
+            font-size: 1.5rem;
+            margin-left: 1rem;
+        }
 
         ul{
+            height: 100%;
             display: flex;
+            justify-content: space-between;
             flex-direction: column;
-            gap: 20px;
-        }
 
-        .items{
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: .5rem 1rem;
-            border-radius: 10px;
-
-            .itemsIcons{
-                color: #fff;
-                font-size: 1.5rem;
-            }
-    
-            .itemsText{
-                color: #fff;
-                font-size: 1rem;
-                opacity: 0;
-
+            .aside-wrapper{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
             }
 
-            &:hover{
-                background-color: #fff;
+            .aside-items{
                 width: 100%;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: .5rem 1rem;
+                border-radius: 10px;
+                cursor: pointer;
 
-                .itemsIcons{
-                    color: var(--corPrimaria);
-                    font-size: 1.5rem;
+                .items-icons{
+                    font-size: 1.2rem;
                 }
-        
-                .itemsText{
-                    color: var(--corPrimaria);
-                    font-size: 1rem;
-                }
-            }
-        }
 
-        &:hover{
-            width: 300px;
-            padding: 2rem 2rem;
-
-            .items{
-                width: 200px;
-
-                .itemsText{
-                    font-size: 1rem;
-                    opacity: 1;
-    
+                &:hover{
+                    background-color: $corClara;
+                    transform: translateX(3px);
                 }
             }
         }
-
     }
-
-    // .hidden{
-    //     left: -500px;
-    // }
 }

@@ -6,11 +6,11 @@ const routes = express.Router();
 routes.post('/', async(request, response) => {
   try{
   const {email, codEtec, login, password} = request.body;
-  if(password.length < 10) {
+  if(password.length < 8) {
     return response.status(400).send({message: 'A senha não pode ter menos de 10 caracteres!'});
   } 
 
-  await db.createUser(email, codEtec, login, password);
+  db.createUser(email, codEtec, login, password);
 
   return response.status(201).send({message: 'Usuário criado com sucesso!!'})
   }

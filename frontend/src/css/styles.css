@@ -1,0 +1,406 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap");
+.header {
+  padding: 1.5rem 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.header .logo {
+  display: flex;
+  color: #fff;
+}
+.header .navMenu ul {
+  display: flex;
+  gap: 3rem;
+}
+.header .navMenu ul .navItems a {
+  position: relative;
+  color: #fff;
+}
+.header .navMenu ul .navItems::after {
+  content: "";
+  height: 2px;
+  width: 0px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -5px;
+  transition: 0.3s;
+}
+.header .navMenu ul .navItems:hover a::after {
+  width: 100%;
+  background-color: #ebdcf1;
+}
+
+@media screen and (max-width: 580px) {
+  .header .navMenu {
+    display: none;
+  }
+}
+.header-home {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1.5rem 2rem;
+}
+.header-home .criar {
+  background: linear-gradient(to left, #7e2da7, #e53f71);
+  color: #fff;
+  padding: 0.3rem 1rem;
+  border-radius: 10px;
+}
+.header-home .criar:hover {
+  transform: translateX(-3px);
+}
+
+.login, .cadastro {
+  background: linear-gradient(to left, #7e2da7, #e53f71);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.login .form, .cadastro .form {
+  background-color: #fff;
+  width: 500px;
+  gap: 40px;
+  padding: 3rem 3rem;
+  border-radius: 5px;
+}
+.login .form h1, .cadastro .form h1 {
+  color: #54236c;
+}
+.login .form > form, .cadastro .form > form {
+  gap: 30px;
+}
+.login .form > form .form-input, .cadastro .form > form .form-input {
+  background-color: #fff;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 3px 3px -3px #444;
+}
+.login .form > form .form-input .input, .cadastro .form > form .form-input .input {
+  position: relative;
+  width: 100%;
+}
+.login .form > form .form-input .input input, .cadastro .form > form .form-input .input input {
+  color: #54236c;
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+}
+.login .form > form .form-input .input input:focus, .cadastro .form > form .form-input .input input:focus {
+  outline: none;
+}
+.login .form > form .form-input .input input:valid + p, .cadastro .form > form .form-input .input input:valid + p {
+  transform: translateY(-160%);
+  font-size: 0.8rem;
+}
+.login .form > form .form-input .input p, .cadastro .form > form .form-input .input p {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  pointer-events: none;
+}
+.login .form > form .input-wrapper, .cadastro .form > form .input-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.login .form > form .input-wrapper .form-input, .cadastro .form > form .input-wrapper .form-input {
+  width: 45%;
+}
+.login .form > form hr, .cadastro .form > form hr {
+  background: linear-gradient(to left, #7e2da7, #e53f71);
+  height: 2px;
+  width: 100%;
+}
+.login .form > form .link, .cadastro .form > form .link {
+  color: #54236c;
+  position: relative;
+  align-self: self-end;
+}
+.login .form > form .link p, .cadastro .form > form .link p {
+  font-size: 0.8rem;
+}
+.login .form > form .link p::after, .cadastro .form > form .link p::after {
+  content: "";
+  height: 2px;
+  width: 0px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -5px;
+  transition: 0.3s;
+}
+.login .form > form .link:hover p::after, .cadastro .form > form .link:hover p::after {
+  width: 100%;
+  background-color: #e53f71;
+}
+.login .form .form-btn, .cadastro .form .form-btn {
+  background: linear-gradient(to left, #7e2da7, #e53f71);
+  color: #fff;
+  width: 100%;
+  margin-top: 20px;
+  padding: 0.8rem 3rem;
+  border-radius: 5px;
+  font-weight: 600;
+  position: relative;
+}
+.login .form .form-btn:hover, .cadastro .form .form-btn:hover {
+  box-shadow: inset 0px 200px 0 #e53f71;
+  transition: 1s;
+}
+.login .form .extra, .cadastro .form .extra {
+  width: 100%;
+  gap: 30px;
+}
+.login .form .extra .hr, .cadastro .form .extra .hr {
+  position: relative;
+  width: 100%;
+}
+.login .form .extra .hr hr, .cadastro .form .extra .hr hr {
+  background: linear-gradient(to left, #7e2da7, #e53f71);
+  height: 2px;
+  width: 100%;
+}
+.login .form .extra .hr p, .cadastro .form .extra .hr p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 1rem;
+}
+.login .form .extra .link-extra a .link-icon, .cadastro .form .extra .link-extra a .link-icon {
+  color: #000;
+  margin: 1rem;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 580px) {
+  .login, .cadastro {
+    background: linear-gradient(to left, #7e2da7, #e53f71);
+    height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+  .login .form, .cadastro .form {
+    background-color: #fff;
+    width: 400px;
+    gap: 40px;
+    padding: 3rem 1rem;
+    border-radius: 5px;
+  }
+  .login .form h1, .cadastro .form h1 {
+    color: #54236c;
+  }
+  .login .form > form, .cadastro .form > form {
+    gap: 30px;
+  }
+  .login .form > form .form-input, .cadastro .form > form .form-input {
+    background-color: #fff;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 3px 3px -3px #444;
+  }
+  .login .form > form .form-input .input, .cadastro .form > form .form-input .input {
+    position: relative;
+    width: 100%;
+  }
+  .login .form > form .form-input .input input, .cadastro .form > form .form-input .input input {
+    color: #54236c;
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+  }
+  .login .form > form .form-input .input input:focus, .cadastro .form > form .form-input .input input:focus {
+    outline: none;
+  }
+  .login .form > form .form-input .input input:valid + p, .cadastro .form > form .form-input .input input:valid + p {
+    transform: translateY(-160%);
+    font-size: 0.8rem;
+  }
+  .login .form > form .form-input .input p, .cadastro .form > form .form-input .input p {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    pointer-events: none;
+  }
+  .login .form > form .input-wrapper, .cadastro .form > form .input-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .login .form > form .input-wrapper .form-input, .cadastro .form > form .input-wrapper .form-input {
+    width: 45%;
+  }
+  .login .form > form hr, .cadastro .form > form hr {
+    background: linear-gradient(to left, #7e2da7, #e53f71);
+    height: 2px;
+    width: 100%;
+  }
+  .login .form > form .link, .cadastro .form > form .link {
+    color: #54236c;
+    position: relative;
+    align-self: self-end;
+  }
+  .login .form > form .link p, .cadastro .form > form .link p {
+    font-size: 0.8rem;
+  }
+  .login .form > form .link p::after, .cadastro .form > form .link p::after {
+    content: "";
+    height: 2px;
+    width: 0px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px;
+    transition: 0.3s;
+  }
+  .login .form > form .link:hover p::after, .cadastro .form > form .link:hover p::after {
+    width: 100%;
+    background-color: #e53f71;
+  }
+  .login .form .form-btn, .cadastro .form .form-btn {
+    background: linear-gradient(to left, #7e2da7, #e53f71);
+    color: #fff;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0.8rem 3rem;
+    border-radius: 5px;
+    font-weight: 600;
+    position: relative;
+  }
+  .login .form .form-btn:hover, .cadastro .form .form-btn:hover {
+    box-shadow: inset 0px 200px 0 #e53f71;
+    transition: 1s;
+  }
+  .login .form .extra, .cadastro .form .extra {
+    width: 100%;
+    gap: 30px;
+  }
+  .login .form .extra .hr, .cadastro .form .extra .hr {
+    position: relative;
+    width: 100%;
+  }
+  .login .form .extra .hr hr, .cadastro .form .extra .hr hr {
+    background: linear-gradient(to left, #7e2da7, #e53f71);
+    height: 2px;
+    width: 100%;
+  }
+  .login .form .extra .hr p, .cadastro .form .extra .hr p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 1rem;
+  }
+  .login .form .extra .link-extra a .link-icon, .cadastro .form .extra .link-extra a .link-icon {
+    color: #000;
+    margin: 1rem;
+    font-size: 2rem;
+  }
+}
+.home {
+  min-height: 100vh;
+  display: flex;
+}
+.home .aside {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 1.5rem 1rem;
+  border-right: 1px solid #444;
+}
+.home .aside h1 {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+.home .aside ul {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.home .aside ul .aside-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.home .aside ul .aside-items {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.home .aside ul .aside-items .items-icons {
+  font-size: 1.2rem;
+}
+.home .aside ul .aside-items:hover {
+  background-color: #ebdcf1;
+  transform: translateX(3px);
+}
+
+:root {
+  --corPrimaria: #7e2da7;
+  --corEscura: #54236c;
+  --corClara: #ebdcf1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.3s;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  color: var(--corEscura);
+}
+
+.btnTransparente {
+  background-color: transparent;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.icones {
+  color: var(--corEscura);
+  font-size: 1.5rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import './home.css'
+import '../../css/styles.css'
+import HeaderHome from '../../Components/HeaderHome/HeaderHome'
 
 import { FiMenu } from 'react-icons/fi'
 import { AiOutlineClose } from 'react-icons/ai'
@@ -19,39 +20,39 @@ const Home = () => {
     // function fecharMenu(){
     //     setMenu("sideMenu hidden")
     // }
+    //<FaChalkboardTeacher className='itemsIcons'/> 
+    //<AiOutlineUser className='itemsIcons'/> 
+    //<LuSettings className='itemsIcons'/> 
+    //<CgLogOut className='itemsIcons'/> 
+
 
     return (
         <div className='home'>
-            <div>
-                {/* <button onClick={abrirMenu}><FiMenu/></button> */}
-                <div /*className={menu}*/ className='sideMenu'>
-                    <div className='sideMenu__top'>
-                    {/* <button onClick={fecharMenu} className='btnTransparente items'><AiOutlineClose className='itemsIcons'/></button> */}
-                        <ul>
-                            <li><button className='btnTransparente items'>
-                                <FaChalkboardTeacher className='itemsIcons'/> 
-                                <p className='itemsText'>Professores</p>
-                            </button></li>
-                        </ul>
+            <aside className='aside'>
+                <h1>SOC</h1>
+                <ul>
+                    <div className='aside-wrapper'>
+                        <li className='aside-items'>
+                            <FaChalkboardTeacher className='items-icons'/> 
+                            <p>Professores</p>
+                        </li>
+                        <li className='aside-items'>
+                            <AiOutlineUser className='items-icons'/>
+                            <p>Conta</p>
+                        </li>
                     </div>
-                    <div className='sideMenu__bottom'>
-                        <ul>
-                            <li><button className='btnTransparente items'>
-                                <AiOutlineUser className='itemsIcons'/> 
-                                <p className='itemsText'>Conta</p>
-                            </button></li>
-
-                            <li><button className='btnTransparente items'>
-                                <LuSettings className='itemsIcons'/> 
-                                <p className='itemsText'>Configurações</p>
-                            </button></li>
-
-                            <li><button className='btnTransparente items'>
-                                <CgLogOut className='itemsIcons'/> 
-                                <p className='itemsText'>Sair</p>
-                            </button></li>
-                        </ul>
+                    <div className='aside-wrapper'>
+                        <li className='aside-items'>
+                            <CgLogOut className='items-icons'/> 
+                            <p>Sair</p>
+                        </li>
                     </div>
+                </ul>
+            </aside>
+            <div className='container'>
+                <HeaderHome/>
+                <div className=''>
+
                 </div>
             </div>
         </div>

@@ -1,12 +1,14 @@
 import mysql2 from 'mysql2/promise';
 
+
+//mudar de acordo com o seu mysql workbench
 async function connect(){
   return await mysql2.createConnection({
-    host:'localhost',
-    post:3434,
-    password:'',
-    database:'SOC_DB',
-    user:'root',
+    host:'localhost', //<-
+    port: 3306, //<-
+    password: 'root1234', //<-
+    database:'DB_soc',
+    user:'root', //<-
   })
 }
 

@@ -1,0 +1,27 @@
+$corPrimaria: #7e2da7;
+$corEscura: #54236c;
+$corClara: #ebdcf1;  
+$corRosa: #e53f71;
+$corBranco: #fff;
+$degrade: linear-gradient(to left, #7e2da7, #e53f71);
+
+.header-home{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1.5rem 2rem;
+
+    .criar{
+        background: $degrade;
+        color: $corBranco;
+        padding: .3rem  1rem;
+        border-radius: 10px;
+
+        &:hover{
+            transform: translateX(-3px);
+        }
+    }
+}
