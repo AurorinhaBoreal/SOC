@@ -7,6 +7,7 @@ O que baixar para rodar o SOC:
 Como rodar o SOC:
 
 .frontEnd{
+  entre na pasta frontend e execute os comandos:
   npm run sass
   npm run watch
   npm start
