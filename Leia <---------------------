@@ -10,7 +10,7 @@ Como rodar o SOC:
   entre na pasta frontend e execute o comando:
   npm start
 
-  comandos para se caso quiser editar o front-end:
+  use esses comandos antes caso queira editar o css:
   npm run sass
   npm run watch
 }
