@@ -7,50 +7,9 @@ $degrade: linear-gradient(to left, #7e2da7, #e53f71);
 
 .home{
     min-height: 100vh;
-    display: flex;
+    display: flex; 
 
-    .aside{
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-        padding: 1.5rem 1rem;
-        border-right: 1px solid #444;
-
-        h1{
-            font-size: 1.5rem;
-            margin-left: 1rem;
-        }
-
-        ul{
-            height: 100%;
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-
-            .aside-wrapper{
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .aside-items{
-                width: 100%;
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                padding: .5rem 1rem;
-                border-radius: 10px;
-                cursor: pointer;
-
-                .items-icons{
-                    font-size: 1.2rem;
-                }
-
-                &:hover{
-                    background-color: $corClara;
-                    transform: translateX(3px);
-                }
-            }
-        }
+    .container{
+        width: 100%;
     }
 }

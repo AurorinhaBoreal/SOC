@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import '../../css/styles.css'
-import Header from '../../Components/Header/Header'
+import NavForm from '../../Components/NavForm/NavForm'
 
 import { PiBarcodeBold } from 'react-icons/pi'
 import { BiSolidUser } from 'react-icons/bi'
@@ -28,7 +28,7 @@ const Login = () => {
 
   return (
     <div className='login'>
-        <Header/>
+        <NavForm/>
         <div className='form flex'>
           <h1>login</h1>
           <form className='flex'>

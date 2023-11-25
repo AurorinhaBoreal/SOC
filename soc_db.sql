@@ -135,6 +135,16 @@ insert into tb_turma(descricao) values
 
 select * from tb_turma;
 
+create table tb_bloco(
+id			int auto_increment,
+descricao 	varchar(15),
+
+constraint pk_bloco primary key(id)
+);
+
+insert into tb_bloco(descricao) values
+("Bloco 1"), ("Bloco 2");
+
 create table tb_profMaterias(	
 id int auto_increment,
 id_prof int,
@@ -160,13 +170,61 @@ from tb_profMaterias
 inner join tb_prof on tb_prof.id = tb_profMaterias.id_prof
 inner join tb_materias on tb_materias.id = tb_profMaterias.id_materia;
 
+create table tb_profDias(
+id		int auto_increment,
+id_prof	int,
+id_dia	int,
+id_bloco int,
+
+constraint pk_profDias primary key(id),
+constraint fk_profes foreign key (id_prof) references tb_prof(id),
+constraint fk_dias foreign key(id_dia) references tb_dias(id),
+constraint fk_blocos foreign key(id_bloco) references tb_bloco(id)
+);
+
+insert into tb_profDias(id_prof, id_dia, id_bloco) values
+("1", "3", "1"), ("1", "3", "2"), #Saiz
+("1", "6", "1"), ("1", "6", "2"),
+("1", "12", "1"), ("1", "12", "2"),
+
+("2", "6", "1"), ("2", "6", "2"), #Francalino
+("2", "12", "1"), ("2", "12", "2"),
+
+("3", "3", "1"), ("3", "3", "2"), #Marcos Nogueira
+("3", "6", "1"), ("3", "6", "2"),
+("3", "15", "1"), ("3", "15", "2"), 
+
+("4", "3", "1"), ("4", "3", "2"), #Luiz
+("4", "6", "1"), ("4", "6", "2"),
+("4", "9", "1"), ("4", "9", "2"), 
+("4", "12", "1"), ("4", "12", "2"),
+("4", "15", "2"), 
+
+("5", "6", "1"), ("5", "6", "2"), #Emerson
+("5", "12", "1"), ("5", "12", "2"),
+("5", "15", "1"), ("5", "15", "2"), 
+
+("6", "3", "1"), ("6", "3", "2"), #Marcão
+("6", "12", "1"), ("6", "12", "2"),
+("6", "15", "1"), ("6", "15", "2"); 
+
+select 
+tb_prof.nome as Professor,
+tb_dias.nome as Dia,
+tb_bloco.descricao as Bloco
+from tb_profDias
+inner join tb_prof on tb_prof.id = tb_profDias.id_prof
+inner join tb_dias on tb_dias.id = tb_profDias.id_dia
+inner join tb_bloco on tb_bloco.id = tb_profDias.id_bloco
+order by tb_profDias.id;
+
 -- SIMBOLOGIA - VISÃO DO COORDENADOR
 create table tb_horarios(
 id 			int auto_increment,
 id_prof		int,
 id_materia	int,
 id_dia		int,
-bloco		enum("1", "2"),
+id_bloco	int,
 id_turma	int,
 dt_criacao	date,	
 
@@ -174,10 +232,11 @@ constraint pk_horarios primary key(id),
 constraint fk_prof foreign key (id_prof) references tb_prof(id),
 constraint fk_materia foreign key (id_materia) references tb_materias(id),
 constraint fk_dia foreign key (id_dia) references tb_dias(id),
+constraint fk_bloco foreign key(id_bloco) references tb_bloco(id),
 constraint fk_turma foreign key (id_turma) references tb_turma(id)
 );
 
-insert into tb_horarios(id_prof, id_materia, id_dia, bloco, id_turma, dt_criacao) values
+insert into tb_horarios(id_prof, id_materia, id_dia, id_bloco, id_turma, dt_criacao) values
 /*Primeiro Bimestre*/
 ('4',"1","3","1","1","2023-01-01"),('4',"1","3","2","2","2023-01-01"), 	   	#Luiz    	   	/Segunda
 ('7',"2","3","1","2","2023-01-01"),('7',"2","3","2","1","2023-01-01"), 	   	#Wilhelm 	   	/Segunda
@@ -203,7 +262,7 @@ tb_prof.nome as Professor,
 tb_cursos.descricao as Curso,
 tb_materias.nome as Componente,
 tb_dias.nome as Dia_Semanal,
-tb_horarios.bloco as Bloco,
+tb_bloco.descricao as Bloco,
 tb_turma.descricao as Turma,
 tb_materias.id_modulo as Modulo,
 tb_periodos.descricao as Periodo,
@@ -215,6 +274,7 @@ inner join tb_materias on tb_materias.id=tb_horarios.id_materia
 inner join tb_cursos on tb_cursos.id=tb_materias.id_curso
 inner join tb_dias on tb_dias.id=tb_horarios.id_dia
 inner join tb_periodos on tb_periodos.id=tb_dias.id_periodos
+inner join tb_bloco on tb_bloco.id=tb_horarios.id_bloco
 inner join tb_turma on tb_turma.id=tb_horarios.id_turma
 where tb_materias.id_modulo = 1 /*Mude isso para 2 se quiser ver o segundo módulo*/
-order by tb_dias.id, tb_horarios.bloco, tb_turma.descricao;
+order by tb_dias.id, tb_horarios.id_bloco, tb_turma.descricao;

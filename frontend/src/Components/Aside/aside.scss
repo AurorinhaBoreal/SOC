@@ -1,0 +1,52 @@
+$corPrimaria: #7e2da7;
+$corEscura: #54236c;
+$corClara: #ebdcf1;  
+$corRosa: #e53f71;
+$corBranco: #fff;
+$degrade: linear-gradient(to left, #7e2da7, #e53f71);
+
+.aside{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 1.5rem 1rem;
+    border-right: 1px solid #444;
+
+    h1{
+        font-size: 1.5rem;
+        margin-left: 1rem;
+    }
+
+    ul{
+        height: 100%;
+        width: fit-content;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    
+        .aside-wrapper{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    
+        .aside-items{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: .5rem 1rem;
+            border-radius: 10px;
+            cursor: pointer;
+    
+            .items-icons{
+                font-size: 1.2rem;
+            }
+    
+            &:hover{
+                background-color: $corClara;
+            }
+        }
+    }
+}

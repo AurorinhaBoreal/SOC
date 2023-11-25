@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../../css/styles.css'
 import API from '../../API'
-import Header from '../../Components/Header/Header'
+import NavForm from '../../Components/NavForm/NavForm'
 
 import { MdEmail } from 'react-icons/md'
 import { PiBarcodeBold } from 'react-icons/pi'
@@ -62,7 +62,7 @@ const Cadastro = () => {
 
   return (
     <div className='cadastro'>
-        <Header/>
+        <NavForm/>
         <div className='form flex'>
           <h1>Cadastro</h1>
           <form className='flex' 

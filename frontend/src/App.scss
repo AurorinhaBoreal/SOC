@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
 
+@import "./Components/NavForm/navForm.scss";
 @import "./Components/Header/header.scss";
-@import "./Components/HeaderHome/HeaderHome.scss";
+@import "./Components/Aside/aside.scss";
 @import "./Pages/Form/form.scss";
 @import "./Pages/Home/home.scss";
+@import "./Pages/Prof/prof.scss";
 
 :root{
     --corPrimaria: #7e2da7;

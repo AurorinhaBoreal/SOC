@@ -1,14 +1,7 @@
 import React, { useState } from 'react'
 import '../../css/styles.css'
-import HeaderHome from '../../Components/HeaderHome/HeaderHome'
-
-import { FiMenu } from 'react-icons/fi'
-import { AiOutlineClose } from 'react-icons/ai'
-
-import { FaChalkboardTeacher } from 'react-icons/fa'
-import { AiOutlineUser } from 'react-icons/ai'
-import { LuSettings } from 'react-icons/lu'
-import { CgLogOut } from 'react-icons/cg'
+import Aside from '../../Components/Aside/Aside'
+import Header from '../../Components/Header/Header'
 
 const Home = () => {
     // const [menu, setMenu] = useState("sideMenu hidden")
@@ -25,32 +18,13 @@ const Home = () => {
     //<LuSettings className='itemsIcons'/> 
     //<CgLogOut className='itemsIcons'/> 
 
-
     return (
         <div className='home'>
-            <aside className='aside'>
-                <h1>SOC</h1>
-                <ul>
-                    <div className='aside-wrapper'>
-                        <li className='aside-items'>
-                            <FaChalkboardTeacher className='items-icons'/> 
-                            <p>Professores</p>
-                        </li>
-                        <li className='aside-items'>
-                            <AiOutlineUser className='items-icons'/>
-                            <p>Conta</p>
-                        </li>
-                    </div>
-                    <div className='aside-wrapper'>
-                        <li className='aside-items'>
-                            <CgLogOut className='items-icons'/> 
-                            <p>Sair</p>
-                        </li>
-                    </div>
-                </ul>
-            </aside>
+            <Aside/>
             <div className='container'>
-                <HeaderHome/>
+                <Header>
+                    <button className='btn-criar'>Criar Horário +</button>
+                </Header>
                 <div className=''>
 
                 </div>

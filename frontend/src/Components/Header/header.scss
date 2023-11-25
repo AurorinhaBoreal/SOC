@@ -6,54 +6,15 @@ $corBranco: #fff;
 $degrade: linear-gradient(to left, #7e2da7, #e53f71);
 
 .header{
-    padding: 1.5rem 3rem;
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    left: 0;
-    
-    .logo{
-        display: flex;
-        color: #fff;
-    }
+    justify-content: end;
+    padding: 1rem 2rem;
 
-    .navMenu{
-        ul{
-            display: flex;
-            gap: 3rem;
-
-            .navItems{
-                a{
-                    position: relative;
-                    color: $corBranco;
-                }
-
-                &::after{
-                    content: '';
-                    height: 2px;
-                    width: 0px;
-                    position: absolute;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    bottom: -5px;
-                    transition: .3s;
-                }
-
-                &:hover a::after{
-                    width: 100%;
-                    background-color: $corClara;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 580px) {
-    .header{
-        .navMenu{
-            display: none;
-        }
+    .btn-criar{
+        background: $degrade;
+        color: $corBranco;
+        padding: .5rem 1rem;
+        border-radius: 5px;
     }
 }

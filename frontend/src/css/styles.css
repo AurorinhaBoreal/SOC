@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap");
-.header {
+.navForm {
   padding: 1.5rem 3rem;
   width: 100%;
   display: flex;
@@ -8,19 +8,19 @@
   top: 0;
   left: 0;
 }
-.header .logo {
+.navForm .logo {
   display: flex;
   color: #fff;
 }
-.header .navMenu ul {
+.navForm .navMenu ul {
   display: flex;
   gap: 3rem;
 }
-.header .navMenu ul .navItems a {
+.navForm .navMenu ul .navItems a {
   position: relative;
   color: #fff;
 }
-.header .navMenu ul .navItems::after {
+.navForm .navMenu ul .navItems::after {
   content: "";
   height: 2px;
   width: 0px;
@@ -30,7 +30,7 @@
   bottom: -5px;
   transition: 0.3s;
 }
-.header .navMenu ul .navItems:hover a::after {
+.navForm .navMenu ul .navItems:hover a::after {
   width: 100%;
   background-color: #ebdcf1;
 }
@@ -40,23 +40,57 @@
     display: none;
   }
 }
-.header-home {
+.header {
   width: 100%;
   display: flex;
   justify-content: end;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 1.5rem 2rem;
+  padding: 1rem 2rem;
 }
-.header-home .criar {
+.header .btn-criar {
   background: linear-gradient(to left, #7e2da7, #e53f71);
   color: #fff;
-  padding: 0.3rem 1rem;
-  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
 }
-.header-home .criar:hover {
-  transform: translateX(-3px);
+
+.aside {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 1.5rem 1rem;
+  border-right: 1px solid #444;
+}
+.aside h1 {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+.aside ul {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.aside ul .aside-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.aside ul .aside-items {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.aside ul .aside-items .items-icons {
+  font-size: 1.2rem;
+}
+.aside ul .aside-items:hover {
+  background-color: #ebdcf1;
 }
 
 .login, .cadastro {
@@ -320,43 +354,152 @@
   min-height: 100vh;
   display: flex;
 }
-.home .aside {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  padding: 1.5rem 1rem;
-  border-right: 1px solid #444;
-}
-.home .aside h1 {
-  font-size: 1.5rem;
-  margin-left: 1rem;
-}
-.home .aside ul {
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-}
-.home .aside ul .aside-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.home .aside ul .aside-items {
+.home .container {
   width: 100%;
+}
+
+.prof {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+}
+.prof .container {
+  width: 100%;
+}
+.prof .form-prof {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 2rem 2rem;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px #aaa;
+}
+.prof .form-prof .form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.prof .form-prof .form .input-foto {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
   gap: 10px;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
+}
+.prof .form-prof .form .input-foto input[type=file] {
+  display: none;
+}
+.prof .form-prof .form .input-foto label {
+  background: linear-gradient(to left, #7e2da7, #e53f71);
+  color: #fff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
   cursor: pointer;
 }
-.home .aside ul .aside-items .items-icons {
+.prof .form-prof .form .input-foto img {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+}
+.prof .form-prof .form .input {
+  position: relative;
+  width: 100%;
+  padding: 0.2rem 0.5rem;
+  box-shadow: 0 3px 3px -3px #444;
+}
+.prof .form-prof .form .input input {
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+}
+.prof .form-prof .form .input input:focus {
+  outline: none;
+}
+.prof .form-prof .form .input input:valid + p {
+  transform: translateY(-160%);
+  font-size: 0.8rem;
+}
+.prof .form-prof .form .input p {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  pointer-events: none;
+}
+.prof .form-prof .form .select-text {
+  color: #aaa;
+}
+.prof .form-prof .form .select-cores {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.prof .form-prof .form .select-cores .cores {
+  display: flex;
+  gap: 5px;
+}
+.prof .form-prof .form .select-cores .cores input[type=radio], .prof .form-prof .form .select-cores .cores input[type=color] {
+  display: none;
+}
+.prof .form-prof .form .select-cores .cores input[type=radio]:checked + label {
+  border: 1px solid #000;
+}
+.prof .form-prof .form .select-cores .cores .cores {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.prof .form-prof .form .select-cores .cores .azul {
+  background-color: #00beef;
+}
+.prof .form-prof .form .select-cores .cores .vermelho {
+  background-color: #f34;
+}
+.prof .form-prof .form .select-cores .cores .verde {
+  background-color: #beff00;
+}
+.prof .form-prof .form .select-cores .cores .amarelo {
+  background-color: #ff0;
+}
+.prof .form-prof .form .select-cores .cores .roxo {
+  background-color: #be00ff;
+}
+.prof .form-prof .form .select-cores .cores .new {
+  background-color: #ddd;
+  display: grid;
+  place-items: center;
   font-size: 1.2rem;
 }
-.home .aside ul .aside-items:hover {
-  background-color: #ebdcf1;
-  transform: translateX(3px);
+.prof .form-prof .form .btns-form {
+  width: 100%;
+  display: flex;
+  gap: 60px;
+}
+.prof .form-prof .form .btns-form button {
+  width: 100px;
+  padding: 0.3rem 0;
+  border-radius: 5px;
+}
+.prof .form-prof .form .btns-form button:hover {
+  transform: translateY(-3px);
+}
+.prof .form-prof .form .btns-form .btn-cancelar {
+  background-color: #aaa;
+  color: #fff;
+}
+.prof .form-prof .form .btns-form .btn-submit {
+  background: linear-gradient(to left, #7e2da7, #e53f71);
+  color: #fff;
+}
+.prof .show {
+  display: block;
+}
+.prof .hidden {
+  display: none;
 }
 
 :root {
