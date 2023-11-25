@@ -7,10 +7,12 @@ O que baixar para rodar o SOC:
 Como rodar o SOC:
 
 .frontEnd{
-  entre na pasta frontend e execute os comandos:
+  entre na pasta frontend e execute o comando:
+  npm start
+
+  comandos para se caso quiser editar o front-end:
   npm run sass
   npm run watch
-  npm start
 }
 
 Back-End(
@@ -23,7 +25,7 @@ Back-End(
     database:'DB_soc',
     user:'root', <-- mudar
 
-  após os passo anteriores, entre na pasta api pelo terminal e execute o comando:
+  após os passos anteriores, entre na pasta api pelo terminal e execute o comando:
   npx nodemon src/index.js
 );
 
