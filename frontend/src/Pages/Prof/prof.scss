@@ -26,118 +26,125 @@ $degrade: linear-gradient(to left, #7e2da7, #e53f71);
 
         .form{
             display: flex;
-            flex-direction: column;
             gap: 30px;
-
-            .input-foto{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                gap: 10px;
-
-                input[type=file]{
-                    display: none;
-                }
-
-                label{                
-                    background: $degrade;
-                    color: $corBranco;
-                    padding: .3rem .8rem;
-                    border-radius: 5px;
-                    font-size: .8rem;
-                    cursor: pointer;
-                }
-                
-                img{
-                    height: 120px;
-                    width: 120px;
-                    border-radius: 50%;
-                }   
-            }
-
-            .input{
-                position: relative;
-                width: 100%;
-                padding: .2rem .5rem;
-                box-shadow: 0 3px 3px -3px #444;
-
-                input{
-                    width: 100%;                   
-                    border: none;
-                    font-size: 1rem;
-
-                    &:focus{
-                        outline: none;
-                    }
-
-                    &:valid + p{
-                        transform: translateY(-160%);
-                        font-size: .8rem;
-                    }                                       
-                }
-
-                p{
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    color: #aaa;
-                    pointer-events: none;
-                }               
-            }
 
             .select-text{
                 color: #aaa;
             }
 
-            .select-cores{
+            .form-esquerdo{
                 display: flex;
                 flex-direction: column;
-                gap: 10px;
+                gap: 20px;
 
-                .cores{
+                .input-foto{
                     display: flex;
-                    gap: 5px;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 10px;
     
-                    input[type=radio], input[type=color]{
+                    input[type=file]{
                         display: none;
                     }
     
-                    input[type=radio]:checked + label{
-                        
-                        border: 1px solid #000;
-                    }
-    
-                    .cores{
-                        height: 30px;
-                        width: 30px;
-                        border-radius: 50%;
+                    label{                
+                        background: $degrade;
+                        color: $corBranco;
+                        padding: .3rem .8rem;
+                        border-radius: 5px;
+                        font-size: .8rem;
                         cursor: pointer;
                     }
-                    .azul{
-                        background-color: #00beef;
+                    
+                    img{
+                        height: 120px;
+                        width: 120px;
+                        border-radius: 50%;
+                    }   
+                }
+    
+                .input{
+                    position: relative;
+                    width: 100%;
+                    padding: .2rem .5rem;
+                    box-shadow: 0 3px 3px -3px #444;
+    
+                    input{
+                        width: 100%;                   
+                        border: none;
+                        font-size: 1rem;
+    
+                        &:focus{
+                            outline: none;
+                        }
+    
+                        &:valid + p{
+                            transform: translateY(-160%);
+                            font-size: .8rem;
+                        }                                       
                     }
-                    .vermelho{
-                        background-color: #f34;
-                    }
-                    .verde{
-                        background-color: #beff00;
-                    }
-                    .amarelo{
-                        background-color: #ff0;
-                    }
-                    .roxo{
-                        background-color: #be00ff;
-                    }
-                    .new{
-                        background-color: #ddd;
-                        display: grid;
-                        place-items: center;
-                        font-size: 1.2rem;
+    
+                    p{
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        color: #aaa;
+                        pointer-events: none;
+                    }               
+                }
+    
+                .select-cores{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+    
+                    .cores{
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+        
+                        input[type=radio], input[type=color]{
+                            display: none;
+                        }
+        
+                        input[type=radio]:checked + label{
+                            
+                            border: 1px solid #000;
+                        }
+        
+                        .cores{
+                            height: 30px;
+                            width: 30px;
+                            border-radius: 50%;
+                            cursor: pointer;
+                        }
+                        .azul{
+                            background-color: #00beef;
+                        }
+                        .vermelho{
+                            background-color: #f34;
+                        }
+                        .verde{
+                            background-color: #beff00;
+                        }
+                        .amarelo{
+                            background-color: #ff0;
+                        }
+                        .roxo{
+                            background-color: #be00ff;
+                        }
+
+                        .newColor{           
+                            text-align: center;           
+                            font-size: 1rem;
+                            line-height: 15px;
+                            cursor: pointer;
+                        }
                     }
                 }
+    
             }
-
             .btns-form{
                 width: 100%;
                 display: flex;

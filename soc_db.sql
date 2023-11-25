@@ -17,22 +17,23 @@ select * from tb_user;
 create table tb_prof(
 id		int auto_increment,
 nome	varchar(30),
+corCard varchar(10),
 rm		int,
 
 constraint pk_prof primary key(id)
 );
 
-insert into tb_prof(nome, rm) values
-("Saiz","1010"),
-("Francalino Antonio", "1011"),
-("Marcos Nogueira","1111"),
-("Luiz","1212"),
-("Emerson","1313"),
-("Marcos Costa","1414"),
+insert into tb_prof(nome, corCard, rm) values
+("Saiz", "#00beef", "1010"),
+("Francalino Antonio", "#00beef", "1011"),
+("Marcos Nogueira", "#00beef", "1111"),
+("Luiz", "#00beef", "1212"),
+("Emerson", "#00beef", "1313"),
+("Marcos Costa", "#00beef", "1414"),
 
-("Wilhelm","4204"),
-("Alcindo","1911"),
-("Raquel","0000");
+("Wilhelm", "#00beef", "4204"),
+("Alcindo", "#00beef", "1911"),
+("Raquel", "#00beef", "0000");
 
 select * from tb_prof;
 

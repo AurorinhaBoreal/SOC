@@ -378,20 +378,27 @@
 }
 .prof .form-prof .form {
   display: flex;
-  flex-direction: column;
   gap: 30px;
 }
-.prof .form-prof .form .input-foto {
+.prof .form-prof .form .select-text {
+  color: #aaa;
+}
+.prof .form-prof .form .form-esquerdo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.prof .form-prof .form .form-esquerdo .input-foto {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 10px;
 }
-.prof .form-prof .form .input-foto input[type=file] {
+.prof .form-prof .form .form-esquerdo .input-foto input[type=file] {
   display: none;
 }
-.prof .form-prof .form .input-foto label {
+.prof .form-prof .form .form-esquerdo .input-foto label {
   background: linear-gradient(to left, #7e2da7, #e53f71);
   color: #fff;
   padding: 0.3rem 0.8rem;
@@ -399,80 +406,78 @@
   font-size: 0.8rem;
   cursor: pointer;
 }
-.prof .form-prof .form .input-foto img {
+.prof .form-prof .form .form-esquerdo .input-foto img {
   height: 120px;
   width: 120px;
   border-radius: 50%;
 }
-.prof .form-prof .form .input {
+.prof .form-prof .form .form-esquerdo .input {
   position: relative;
   width: 100%;
   padding: 0.2rem 0.5rem;
   box-shadow: 0 3px 3px -3px #444;
 }
-.prof .form-prof .form .input input {
+.prof .form-prof .form .form-esquerdo .input input {
   width: 100%;
   border: none;
   font-size: 1rem;
 }
-.prof .form-prof .form .input input:focus {
+.prof .form-prof .form .form-esquerdo .input input:focus {
   outline: none;
 }
-.prof .form-prof .form .input input:valid + p {
+.prof .form-prof .form .form-esquerdo .input input:valid + p {
   transform: translateY(-160%);
   font-size: 0.8rem;
 }
-.prof .form-prof .form .input p {
+.prof .form-prof .form .form-esquerdo .input p {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   color: #aaa;
   pointer-events: none;
 }
-.prof .form-prof .form .select-text {
-  color: #aaa;
-}
-.prof .form-prof .form .select-cores {
+.prof .form-prof .form .form-esquerdo .select-cores {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.prof .form-prof .form .select-cores .cores {
+.prof .form-prof .form .form-esquerdo .select-cores .cores {
   display: flex;
+  align-items: center;
   gap: 5px;
 }
-.prof .form-prof .form .select-cores .cores input[type=radio], .prof .form-prof .form .select-cores .cores input[type=color] {
+.prof .form-prof .form .form-esquerdo .select-cores .cores input[type=radio], .prof .form-prof .form .form-esquerdo .select-cores .cores input[type=color] {
   display: none;
 }
-.prof .form-prof .form .select-cores .cores input[type=radio]:checked + label {
+.prof .form-prof .form .form-esquerdo .select-cores .cores input[type=radio]:checked + label {
   border: 1px solid #000;
 }
-.prof .form-prof .form .select-cores .cores .cores {
+.prof .form-prof .form .form-esquerdo .select-cores .cores .cores {
   height: 30px;
   width: 30px;
   border-radius: 50%;
   cursor: pointer;
 }
-.prof .form-prof .form .select-cores .cores .azul {
+.prof .form-prof .form .form-esquerdo .select-cores .cores .azul {
   background-color: #00beef;
 }
-.prof .form-prof .form .select-cores .cores .vermelho {
+.prof .form-prof .form .form-esquerdo .select-cores .cores .vermelho {
   background-color: #f34;
 }
-.prof .form-prof .form .select-cores .cores .verde {
+.prof .form-prof .form .form-esquerdo .select-cores .cores .verde {
   background-color: #beff00;
 }
-.prof .form-prof .form .select-cores .cores .amarelo {
+.prof .form-prof .form .form-esquerdo .select-cores .cores .amarelo {
   background-color: #ff0;
 }
-.prof .form-prof .form .select-cores .cores .roxo {
+.prof .form-prof .form .form-esquerdo .select-cores .cores .roxo {
   background-color: #be00ff;
 }
-.prof .form-prof .form .select-cores .cores .new {
-  background-color: #ddd;
-  display: grid;
-  place-items: center;
-  font-size: 1.2rem;
+.prof .form-prof .form .form-esquerdo .select-cores .cores .newColor {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 15px;
+  cursor: pointer;
 }
 .prof .form-prof .form .btns-form {
   width: 100%;

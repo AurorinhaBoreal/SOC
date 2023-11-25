@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { CirclePicker } from 'react-color';
 import '../../css/styles.css'
 import Aside from '../../Components/Aside/Aside'
 import Header from '../../Components/Header/Header'
@@ -25,6 +26,12 @@ const Prof = () => {
     setFile(URL.createObjectURL(event.target.files[0]))
   }
 
+  const [currentColor, setCurrentColor] = useState("#aaa")
+  const handleOnChange = (color) =>{
+    setCurrentColor(color.hex)
+    console.log(currentColor)
+  }
+
   return (
     <div className='prof'>
         <Aside/>
@@ -34,43 +41,43 @@ const Prof = () => {
             onClick={profForm}>Criar Professor +</button>
           </Header>
         </div>
-        <div className={show}>
-          {/* <IoMdClose onClick={close} className='btn-fechar'/> */}
+        <div className={show} style={{boxShadow: `0 5px 5px 5px ${currentColor}`}}>
           <form className='form'>
-            <div className='input-foto'>
-              <input type="file" id='foto' onChange={getFile}/>
-              <img src={file} id='profile-pic'/>
-              <label for='foto' id='input-file' accept="image/jpeg, image/png, image/jpg">Colocar Imagem</label>
-            </div>
-            <div className="input">
-              <input type='text' required/>
-              <p>Nome</p>
-            </div>
-            <div className='select-cores'>
-              <h4 className='select-text'>Selecione uma cor</h4>
-              <div className='cores'>
-                <input type="radio" name='color' id='1' value='#00beef'/>
-                <label for="1" className='cores azul'></label>
-                <input type="radio" name='color' id='2' value='#f34'/>
-                <label for="2" className='cores vermelho'></label>
-                <input type="radio" name='color' id='3' value='#beff00'/>
-                <label for="3" className='cores verde'></label>
-                <input type="radio" name='color' id='4' value='#ff0'/>
-                <label for="4" className='cores amarelo'></label>
-                <input type="radio" name='color' id='5' value='be00ff'/>
-                <label for="5" className='cores roxo'></label>
-
-                <input type="color" name='color' id='newColor'/>
-                <label for="newColor" className='cores new'><MdAdd /></label>
+            <div className='form-esquerdo'>
+              <div className='input-foto'>
+                <input type="file" id='foto' onChange={getFile}/>
+                <img src={file} id='profile-pic'/>
+                <label for='foto' id='input-file' accept="image/jpeg, image/png, image/jpg">Colocar Imagem</label>
+              </div>
+              <div className="input">
+                <input type='text' required/>
+                <p>Nome</p>
+              </div>
+              <div className='select-cores'>
+                <h4 className='select-text'>Selecione a cor do card</h4>
+                <div className='cores'>
+                  <CirclePicker 
+                  onChangeComplete={handleOnChange}/>
+                </div>
+              </div>
+              <div className='btns-form'>
+                <button className='btn-cancelar' type='button' onClick={close}>Cancelar</button>
+                <button className='btn-submit' type='submit'>Salvar</button>
               </div>
             </div>
-            <div>
-              <h4 className='select-text'>Selecione as matérias</h4>
-              <div></div>
-            </div>
-            <div className='btns-form'>
-              <button className='btn-cancelar' type='button' onClick={close}>Cancelar</button>
-              <button className='btn-submit' type='submit'>Salvar</button>
+            <div className='form-direito'>
+              <div className='select-materias'>
+                  <h4 className='select-text'>Selecione as matérias</h4>
+                  <div>
+                    {/* Opções com base no banco de dados */}
+                  </div>
+              </div>
+              <div className='select-dias'>
+                <h4 className='select-text'>Selecione os dias</h4>
+                  <div>
+                    {/* Opções com base no banco de dados */}
+                  </div>
+              </div>
             </div>
           </form>
         </div>
