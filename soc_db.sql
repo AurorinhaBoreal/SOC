@@ -219,6 +219,18 @@ inner join tb_dias on tb_dias.id = tb_profDias.id_dia
 inner join tb_bloco on tb_bloco.id = tb_profDias.id_bloco
 order by tb_profDias.id;
 
+create table tb_salas(
+id		int auto_increment,
+descricao	varchar(20),
+
+constraint pk_id primary key(id)
+);
+
+insert into tb_salas(descricao) values
+("Lab. 1"), ("Lab. 2"), ("Lab. 3"), ("Lab. 4"), ("Lab. 5"), ("Lab. 6"), ("Lab. 7"), ("Lab.8"),
+("Lab. Maker"), ("Lab. Redes"),
+("Sala 1"), ("Sala 2"), ("Sala 3"), ("Sala 4"), ("Sala 5"), ("Sala 6"), ("Sala 7"), ("Sala 8"), ("Sala 9"), ("Sala 10"), ("Sala 11"), ("Sala 12");
+
 -- SIMBOLOGIA - VISÃO DO COORDENADOR
 create table tb_horarios(
 id 			int auto_increment,
@@ -227,6 +239,7 @@ id_materia	int,
 id_dia		int,
 id_bloco	int,
 id_turma	int,
+id_sala		int,
 dt_criacao	date,	
 
 constraint pk_horarios primary key(id),
@@ -234,29 +247,30 @@ constraint fk_prof foreign key (id_prof) references tb_prof(id),
 constraint fk_materia foreign key (id_materia) references tb_materias(id),
 constraint fk_dia foreign key (id_dia) references tb_dias(id),
 constraint fk_bloco foreign key(id_bloco) references tb_bloco(id),
-constraint fk_turma foreign key (id_turma) references tb_turma(id)
+constraint fk_turma foreign key (id_turma) references tb_turma(id),
+constraint fk_sala foreign key (id_sala) references tb_salas(id)
 );
 
-insert into tb_horarios(id_prof, id_materia, id_dia, id_bloco, id_turma, dt_criacao) values
+insert into tb_horarios(id_prof, id_materia, id_dia, id_bloco, id_turma, id_sala, dt_criacao) values
 /*Primeiro Bimestre*/
-('4',"1","3","1","1","2023-01-01"),('4',"1","3","2","2","2023-01-01"), 	   	#Luiz    	   	   /Segunda
-('7',"2","3","1","2","2023-01-01"),('7',"2","3","2","1","2023-01-01"), 	   	#Wilhelm 	   	   /Segunda
-('3',"1","6","1","3","2023-01-01"),										                              	#Marcos Nogueira /Terça
-('1',"3","6","2","3","2023-01-01"),                                        	#Saiz		   	      /Terça
-('1',"3","9","1","1","2023-01-01"),('1',"3","9","2","2","2023-01-01"), 	   	#Saiz			         /Quarta
-('5',"4","9","1","2","2023-01-01"),('5',"4","9","2","1","2023-01-01"),	   	 #Emerson		       /Quarta
-('2',"5","12","1","1","2023-01-01"),('2',"5","12","2","2","2023-01-01"),   	#Francalino		    /Quinta
-('6',"6","12","1","2","2023-01-01"),('6',"6","12","2","1","2023-01-01"),   	#Marcão			       /Quinta
-('8',"7","15","1","3","2023-01-01"),									   	                           #Alcindo		       /Sexta
-('9',"8","15","2","3","2023-01-01"),									   	                           #Raquel			       /Sexta
+('4',"1","3","1","1","6","2023-01-01"),('4',"1","3","2","2","6","2023-01-01"), 	   	#Luiz    	   	   	/Segunda
+('7',"2","3","1","2","10","2023-01-01"),('7',"2","3","2","1","10","2023-01-01"), 	#Wilhelm 	   	  	/Segunda
+('3',"1","6","1","3","4","2023-01-01"),										   		#Marcos Nogueira 	/Terça
+('1',"3","6","2","3","6","2023-01-01"),                                        		#Saiz		   	    /Terça
+('1',"3","9","1","1","6","2023-01-01"),('1',"3","9","2","2","6","2023-01-01"), 	   	#Saiz			    /Quarta
+('5',"4","9","1","2","2","2023-01-01"),('5',"4","9","2","1","2","2023-01-01"),	   	#Emerson		    /Quarta
+('2',"5","12","1","1","2","2023-01-01"),('2',"5","12","2","2","2","2023-01-01"),   	#Francalino		    /Quinta
+('6',"6","12","1","2","1","2023-01-01"),('6',"6","12","2","1","1","2023-01-01"),   	#Marcão			    /Quinta
+('8',"7","15","1","3","20","2023-01-01"),									   		#Alcindo		    /Sexta
+('9',"8","15","2","3","20","2023-01-01"),									   		#Raquel			    /Sexta
 
 /*Segundo Bimestre*/
-('1',"9","3","1","3","2023-06-01"),('1',"9","3","2","3","2023-06-01"),     	#Saiz			         /Segunda
-('2',"10","6","1","3","2023-06-01"),									      	                        #Francalino		    /Terça
-('3',"11","6","2","3","2023-06-01"),	                                      	#Marcos Nogueira /Terça
-('4',"12","9","1","3","2023-06-01"),('4',"12","9","2","3","2023-06-01"),   	#Luiz			         /Quarta
-('5',"13","12","1","3","2023-06-01"),('5',"13","12","2","3","2023-06-01"), 	#Emersono		      /Quinta
-('6',"14","15","1","3","2023-06-01"),('6',"15","15","2","3","2023-06-01"); 	#Marcão			       /Sexta
+('1',"9","3","1","3","7","2023-06-01"),('1',"9","3","2","3","7","2023-06-01"),     	#Saiz			    /Segunda
+('2',"10","6","1","3","6","2023-06-01"),									    	#Francalino		    /Terça
+('3',"11","6","2","3","6","2023-06-01"),	                                    	#Marcos Nogueira 	/Terça
+('4',"12","9","1","3","4","2023-06-01"),('4',"12","9","2","3","4","2023-06-01"),   	#Luiz			    /Quarta
+('5',"13","12","1","3","4","2023-06-01"),('5',"13","12","2","3","4","2023-06-01"), 	#Emersono		    /Quinta
+('6',"14","15","1","3","9","2023-06-01"),('6',"15","15","2","3","9","2023-06-01"); 	#Marcão			    /Sexta
 
 select
 tb_prof.nome as Professor,
@@ -266,6 +280,7 @@ tb_dias.nome as Dia_Semanal,
 tb_bloco.descricao as Bloco,
 tb_turma.descricao as Turma,
 tb_materias.id_modulo as Modulo,
+tb_salas.descricao as Sala_Lab,
 tb_periodos.descricao as Periodo,
 tb_horarios.dt_criacao as Data_de_Criação,
 adddate(tb_horarios.dt_criacao, interval 5 month) as Data_de_Validade
@@ -277,5 +292,6 @@ inner join tb_dias on tb_dias.id=tb_horarios.id_dia
 inner join tb_periodos on tb_periodos.id=tb_dias.id_periodos
 inner join tb_bloco on tb_bloco.id=tb_horarios.id_bloco
 inner join tb_turma on tb_turma.id=tb_horarios.id_turma
+inner join tb_salas on tb_salas.id=tb_horarios.id_sala
 where tb_materias.id_modulo = 1 /*Mude isso para 2 se quiser ver o segundo módulo*/
 order by tb_dias.id, tb_horarios.id_bloco, tb_turma.descricao;
