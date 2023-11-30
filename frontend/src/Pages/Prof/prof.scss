@@ -170,6 +170,44 @@ $degrade: linear-gradient(to left, #7e2da7, #e53f71);
                     color: $corBranco;
                 }
             }
+
+            .form-direito{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                .select-dias{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    .div-dias{
+                        display: flex;
+                        gap: 10px;
+
+                        .dia{
+                            
+                            input[type=checkbox]{
+                                display: none;
+                            }
+                            input[type=checkbox]:checked + label{
+                                background: $corPrimaria;
+                                color: $corBranco;
+                                border: 1px solid $corPrimaria;
+                                transition: 0s;
+                            }
+
+                            label{
+                                color: $corEscura;
+                                padding: .1rem .8rem;
+                                border: 1px solid $corPrimaria;
+                                border-radius: 10px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 

@@ -183,6 +183,8 @@ constraint fk_dias foreign key(id_dia) references tb_dias(id),
 constraint fk_blocos foreign key(id_bloco) references tb_bloco(id)
 );
 
+/*-Colocar um campo para ver se está disponivel-*/
+
 insert into tb_profDias(id_prof, id_dia, id_bloco) values
 ("1", "3", "1"), ("1", "3", "2"), #Saiz
 ("1", "6", "1"), ("1", "6", "2"),

@@ -1,4 +1,4 @@
-import database from '../repository/conectmysql.js';
+import database from '../repository/connectmysql.js';
 
 async function handleLogin(cod_etec, login, password) {
     const sql = 'select * from tb_user where cod_etec = ? and login = ? and senha = ?;'

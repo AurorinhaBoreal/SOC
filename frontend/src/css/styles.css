@@ -500,6 +500,36 @@
   background: linear-gradient(to left, #7e2da7, #e53f71);
   color: #fff;
 }
+.prof .form-prof .form .form-direito {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.prof .form-prof .form .form-direito .select-dias {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.prof .form-prof .form .form-direito .select-dias .div-dias {
+  display: flex;
+  gap: 10px;
+}
+.prof .form-prof .form .form-direito .select-dias .div-dias .dia input[type=checkbox] {
+  display: none;
+}
+.prof .form-prof .form .form-direito .select-dias .div-dias .dia input[type=checkbox]:checked + label {
+  background: #7e2da7;
+  color: #fff;
+  border: 1px solid #7e2da7;
+  transition: 0s;
+}
+.prof .form-prof .form .form-direito .select-dias .div-dias .dia label {
+  color: #54236c;
+  padding: 0.1rem 0.8rem;
+  border: 1px solid #7e2da7;
+  border-radius: 10px;
+  cursor: pointer;
+}
 .prof .show {
   display: block;
 }

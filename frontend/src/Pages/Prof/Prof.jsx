@@ -66,14 +66,33 @@ const Prof = () => {
               </div>
             </div>
             <div className='form-direito'>
-              <div className='select-materias'>
-                  <h4 className='select-text'>Selecione as matérias</h4>
-                  <div>
-                    {/* Opções com base no banco de dados */}
-                  </div>
-              </div>
               <div className='select-dias'>
                 <h4 className='select-text'>Selecione os dias</h4>
+                  <div className='div-dias'>
+                    <div className='dia'>
+                      <input type="checkbox" name="seg" id="3" />
+                      <label for="3">Segunda</label>
+                    </div>
+                    <div className='dia'>
+                      <input type="checkbox" name="seg" id="6" />
+                      <label for="6">Terça</label>
+                    </div>
+                    <div className='dia'>
+                      <input type="checkbox" name="seg" id="9" />
+                      <label for="9">Quarta</label>
+                    </div>
+                    <div className='dia'>
+                      <input type="checkbox" name="seg" id="12" />
+                      <label for="12">Quinta</label>
+                    </div>
+                    <div className='dia'>
+                      <input type="checkbox" name="seg" id="15" />
+                      <label for="15">Sexta</label>
+                    </div>
+                  </div>
+              </div>
+              <div className='select-materias'>
+                  <h4 className='select-text'>Selecione as matérias</h4>
                   <div>
                     {/* Opções com base no banco de dados */}
                   </div>
