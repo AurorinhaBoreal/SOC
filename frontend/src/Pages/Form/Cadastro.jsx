@@ -64,54 +64,54 @@ const Cadastro = () => {
     <div className='cadastro'>
         <NavForm/>
         <div className='form flex'>
-          <h1>Cadastro</h1>
+          <h1 className='form__title'>Cadastro</h1>
           <form className='flex' 
           onSubmit={handleRegister}>
-            <div className='form-input emailInput'>
+            <div className='form__items emailInput'>
               <MdEmail className='icones'/>
-              <div className="input">
+              <div className="form__items__input">
                   <input type="text" name="" id="" required
                   value={email} onChange={(e)=> setEmail(e.target.value)}/>
-                  <p>Email</p>
+                  <p className='form__items__placeholder'>Email</p>
               </div>
             </div>
-            <div className='input-wrapper'>
-              <div className='form-input codInput'>
+            <div className='form__div'>
+              <div className='form__items codInput'>
                 <PiBarcodeBold className='icones'/>
-                <div className="input">
+                <div className="form__items__input">
                   <input type="text" name="" id="" required
                   value={codEtec} onChange={(e)=> setCodEtec(e.target.value)}/>
-                  <p>Cód. ETEC</p>
+                  <p className='form__items__placeholder'>Cód. ETEC</p>
                 </div>
               </div>
-              <div className='form-input rmInput'>
+              <div className='form__items rmInput'>
                 <BiSolidUser className='icones'/>
-                <div className="input">
+                <div className="form__items__input">
                   <input type="text" name="" id="" required
                   value={login} onChange={(e)=> setLogin(e.target.value)}/>
-                  <p>Nome Usuário</p>
+                  <p className='form__items__placeholder'>Nome Usuário</p>
                 </div>             
               </div>
             </div>
-            <div className="form-input senhaInput">
+            <div className="form__items senhaInput">
               <RiLockPasswordLine className='icones'/>
-              <div className="input">
+              <div className="form__items__input">
                 <input type={mostrarSenha} name="" id="" required
                 value={password} onChange={(e)=> setPassword(e.target.value)}/>
-                <p>Senha min. 8 caracteres</p>
+                <p className='form__items__placeholder'>Senha min. 8 caracteres</p>
               </div>
             </div>
-            <div className="form-input repetirSenhaInput">
+            <div className="form__items repetirSenhaInput">
               <RiLockPasswordFill className='icones'/>
-              <div className="input">
+              <div className="form__items__input">
                 <input type={mostrarSenha} name="" id="" required
                 value={cPassword} onChange={(e)=> setCPassword(e.target.value)}/>
-                <p>Repetir Senha</p>
+                <p className='form__items__placeholder'>Repetir Senha</p>
               </div>
               <button className='btnTransparente' onClick={verSenha} type="button">{senhaView}</button>
             </div>
-            <Link className="link" to="/"><p>Já tem uma conta? Entre agora mesmo</p></Link>
-            <button className='form-btn' type="submit">Cria conta</button>
+            <Link className="form__link" to="/"><p>Já tem uma conta? Entre agora mesmo</p></Link>
+            <button className='form__btn__submit' type="submit">Cria conta</button>
           </form>
         </div>
     </div>

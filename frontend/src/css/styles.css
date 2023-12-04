@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap");
-.navForm {
+.header__form {
   padding: 1.5rem 3rem;
   width: 100%;
   display: flex;
@@ -8,19 +8,19 @@
   top: 0;
   left: 0;
 }
-.navForm .logo {
+.header__form__logo {
   display: flex;
   color: #fff;
 }
-.navForm .navMenu ul {
+.header__form__list {
   display: flex;
   gap: 3rem;
 }
-.navForm .navMenu ul .navItems a {
+.header__form__items__link {
   position: relative;
-  color: #fff;
+  color: #ebdcf1;
 }
-.navForm .navMenu ul .navItems::after {
+.header__form__items__link::after {
   content: "";
   height: 2px;
   width: 0px;
@@ -30,23 +30,18 @@
   bottom: -5px;
   transition: 0.3s;
 }
-.navForm .navMenu ul .navItems:hover a::after {
+.header__form__items:hover a::after {
   width: 100%;
   background-color: #ebdcf1;
 }
 
-@media screen and (max-width: 580px) {
-  .header .navMenu {
-    display: none;
-  }
-}
-.header {
+.header__home {
   width: 100%;
   display: flex;
   justify-content: end;
   padding: 1rem 2rem;
 }
-.header .btn-criar {
+.header__home__btn__criar {
   background: linear-gradient(to left, #7e2da7, #e53f71);
   color: #fff;
   padding: 0.5rem 1rem;
@@ -61,23 +56,23 @@
   padding: 1.5rem 1rem;
   border-right: 1px solid #444;
 }
-.aside h1 {
+.aside__logo {
   font-size: 1.5rem;
   margin-left: 1rem;
 }
-.aside ul {
+.aside__div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.aside__list {
   height: 100%;
   width: fit-content;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
 }
-.aside ul .aside-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.aside ul .aside-items {
+.aside__items__link {
   width: 100%;
   display: flex;
   align-items: center;
@@ -86,11 +81,11 @@
   border-radius: 10px;
   cursor: pointer;
 }
-.aside ul .aside-items .items-icons {
-  font-size: 1.2rem;
-}
-.aside ul .aside-items:hover {
+.aside__items__link:hover {
   background-color: #ebdcf1;
+}
+.aside__icons {
+  font-size: 1.2rem;
 }
 
 .login, .cadastro {
@@ -106,13 +101,13 @@
   padding: 3rem 3rem;
   border-radius: 5px;
 }
-.login .form h1, .cadastro .form h1 {
+.login .form__title, .cadastro .form__title {
   color: #54236c;
 }
 .login .form > form, .cadastro .form > form {
   gap: 30px;
 }
-.login .form > form .form-input, .cadastro .form > form .form-input {
+.login .form__items, .cadastro .form__items {
   background-color: #fff;
   width: 100%;
   padding: 0.8rem 1rem;
@@ -121,52 +116,53 @@
   gap: 10px;
   box-shadow: 0 3px 3px -3px #444;
 }
-.login .form > form .form-input .input, .cadastro .form > form .form-input .input {
+.login .form__items__input, .cadastro .form__items__input {
   position: relative;
   width: 100%;
 }
-.login .form > form .form-input .input input, .cadastro .form > form .form-input .input input {
+.login .form__items__input input, .cadastro .form__items__input input {
   color: #54236c;
   width: 100%;
   border: none;
   font-size: 1rem;
 }
-.login .form > form .form-input .input input:focus, .cadastro .form > form .form-input .input input:focus {
+.login .form__items__input input:focus, .cadastro .form__items__input input:focus {
   outline: none;
 }
-.login .form > form .form-input .input input:valid + p, .cadastro .form > form .form-input .input input:valid + p {
+.login .form__items__input input:valid + p, .cadastro .form__items__input input:valid + p {
   transform: translateY(-160%);
   font-size: 0.8rem;
 }
-.login .form > form .form-input .input p, .cadastro .form > form .form-input .input p {
+.login .form__items__placeholder, .cadastro .form__items__placeholder {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   color: #aaa;
   pointer-events: none;
 }
-.login .form > form .input-wrapper, .cadastro .form > form .input-wrapper {
+.login .form__div, .cadastro .form__div {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  gap: 10px;
 }
-.login .form > form .input-wrapper .form-input, .cadastro .form > form .input-wrapper .form-input {
-  width: 45%;
+.login .form__div .form__items, .cadastro .form__div .form__items {
+  width: 100%;
 }
-.login .form > form hr, .cadastro .form > form hr {
+.login .form__hr, .cadastro .form__hr {
   background: linear-gradient(to left, #7e2da7, #e53f71);
   height: 2px;
   width: 100%;
 }
-.login .form > form .link, .cadastro .form > form .link {
+.login .form__link, .cadastro .form__link {
   color: #54236c;
   position: relative;
   align-self: self-end;
 }
-.login .form > form .link p, .cadastro .form > form .link p {
+.login .form__link p, .cadastro .form__link p {
   font-size: 0.8rem;
 }
-.login .form > form .link p::after, .cadastro .form > form .link p::after {
+.login .form__link p::after, .cadastro .form__link p::after {
   content: "";
   height: 2px;
   width: 0px;
@@ -176,11 +172,11 @@
   bottom: -5px;
   transition: 0.3s;
 }
-.login .form > form .link:hover p::after, .cadastro .form > form .link:hover p::after {
+.login .form__link:hover p::after, .cadastro .form__link:hover p::after {
   width: 100%;
   background-color: #e53f71;
 }
-.login .form .form-btn, .cadastro .form .form-btn {
+.login .form__btn__submit, .cadastro .form__btn__submit {
   background: linear-gradient(to left, #7e2da7, #e53f71);
   color: #fff;
   width: 100%;
@@ -190,24 +186,24 @@
   font-weight: 600;
   position: relative;
 }
-.login .form .form-btn:hover, .cadastro .form .form-btn:hover {
+.login .form__btn__submit:hover, .cadastro .form__btn__submit:hover {
   box-shadow: inset 0px 200px 0 #e53f71;
   transition: 1s;
 }
-.login .form .extra, .cadastro .form .extra {
+.login .form__extra, .cadastro .form__extra {
   width: 100%;
   gap: 30px;
 }
-.login .form .extra .hr, .cadastro .form .extra .hr {
+.login .form__extra__hr, .cadastro .form__extra__hr {
   position: relative;
   width: 100%;
 }
-.login .form .extra .hr hr, .cadastro .form .extra .hr hr {
+.login .form__extra__hr hr, .cadastro .form__extra__hr hr {
   background: linear-gradient(to left, #7e2da7, #e53f71);
   height: 2px;
   width: 100%;
 }
-.login .form .extra .hr p, .cadastro .form .extra .hr p {
+.login .form__extra__hr p, .cadastro .form__extra__hr p {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -215,141 +211,12 @@
   background-color: #fff;
   padding: 1rem;
 }
-.login .form .extra .link-extra a .link-icon, .cadastro .form .extra .link-extra a .link-icon {
+.login .form__redes-sociais__icon, .cadastro .form__redes-sociais__icon {
   color: #000;
   margin: 1rem;
   font-size: 2rem;
 }
 
-@media screen and (max-width: 580px) {
-  .login, .cadastro {
-    background: linear-gradient(to left, #7e2da7, #e53f71);
-    height: 100vh;
-    display: grid;
-    place-items: center;
-  }
-  .login .form, .cadastro .form {
-    background-color: #fff;
-    width: 400px;
-    gap: 40px;
-    padding: 3rem 1rem;
-    border-radius: 5px;
-  }
-  .login .form h1, .cadastro .form h1 {
-    color: #54236c;
-  }
-  .login .form > form, .cadastro .form > form {
-    gap: 30px;
-  }
-  .login .form > form .form-input, .cadastro .form > form .form-input {
-    background-color: #fff;
-    width: 100%;
-    padding: 0.8rem 1rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    box-shadow: 0 3px 3px -3px #444;
-  }
-  .login .form > form .form-input .input, .cadastro .form > form .form-input .input {
-    position: relative;
-    width: 100%;
-  }
-  .login .form > form .form-input .input input, .cadastro .form > form .form-input .input input {
-    color: #54236c;
-    width: 100%;
-    border: none;
-    font-size: 1rem;
-  }
-  .login .form > form .form-input .input input:focus, .cadastro .form > form .form-input .input input:focus {
-    outline: none;
-  }
-  .login .form > form .form-input .input input:valid + p, .cadastro .form > form .form-input .input input:valid + p {
-    transform: translateY(-160%);
-    font-size: 0.8rem;
-  }
-  .login .form > form .form-input .input p, .cadastro .form > form .form-input .input p {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #aaa;
-    pointer-events: none;
-  }
-  .login .form > form .input-wrapper, .cadastro .form > form .input-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-  .login .form > form .input-wrapper .form-input, .cadastro .form > form .input-wrapper .form-input {
-    width: 45%;
-  }
-  .login .form > form hr, .cadastro .form > form hr {
-    background: linear-gradient(to left, #7e2da7, #e53f71);
-    height: 2px;
-    width: 100%;
-  }
-  .login .form > form .link, .cadastro .form > form .link {
-    color: #54236c;
-    position: relative;
-    align-self: self-end;
-  }
-  .login .form > form .link p, .cadastro .form > form .link p {
-    font-size: 0.8rem;
-  }
-  .login .form > form .link p::after, .cadastro .form > form .link p::after {
-    content: "";
-    height: 2px;
-    width: 0px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -5px;
-    transition: 0.3s;
-  }
-  .login .form > form .link:hover p::after, .cadastro .form > form .link:hover p::after {
-    width: 100%;
-    background-color: #e53f71;
-  }
-  .login .form .form-btn, .cadastro .form .form-btn {
-    background: linear-gradient(to left, #7e2da7, #e53f71);
-    color: #fff;
-    width: 100%;
-    margin-top: 20px;
-    padding: 0.8rem 3rem;
-    border-radius: 5px;
-    font-weight: 600;
-    position: relative;
-  }
-  .login .form .form-btn:hover, .cadastro .form .form-btn:hover {
-    box-shadow: inset 0px 200px 0 #e53f71;
-    transition: 1s;
-  }
-  .login .form .extra, .cadastro .form .extra {
-    width: 100%;
-    gap: 30px;
-  }
-  .login .form .extra .hr, .cadastro .form .extra .hr {
-    position: relative;
-    width: 100%;
-  }
-  .login .form .extra .hr hr, .cadastro .form .extra .hr hr {
-    background: linear-gradient(to left, #7e2da7, #e53f71);
-    height: 2px;
-    width: 100%;
-  }
-  .login .form .extra .hr p, .cadastro .form .extra .hr p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 1rem;
-  }
-  .login .form .extra .link-extra a .link-icon, .cadastro .form .extra .link-extra a .link-icon {
-    color: #000;
-    margin: 1rem;
-    font-size: 2rem;
-  }
-}
 .home {
   min-height: 100vh;
   display: flex;
@@ -366,7 +233,7 @@
 .prof .container {
   width: 100%;
 }
-.prof .form-prof {
+.prof .form__prof {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -376,29 +243,29 @@
   border-radius: 5px;
   box-shadow: 0px 5px 10px #aaa;
 }
-.prof .form-prof .form {
+.prof .form__prof > form {
   display: flex;
   gap: 30px;
 }
-.prof .form-prof .form .select-text {
+.prof .form__prof .select-text {
   color: #aaa;
 }
-.prof .form-prof .form .form-esquerdo {
+.prof .form__prof__esquerdo {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.prof .form-prof .form .form-esquerdo .input-foto {
+.prof .form__prof__input-foto {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 10px;
 }
-.prof .form-prof .form .form-esquerdo .input-foto input[type=file] {
+.prof .form__prof__input-foto input[type=file] {
   display: none;
 }
-.prof .form-prof .form .form-esquerdo .input-foto label {
+.prof .form__prof__input-foto label {
   background: linear-gradient(to left, #7e2da7, #e53f71);
   color: #fff;
   padding: 0.3rem 0.8rem;
@@ -406,134 +273,98 @@
   font-size: 0.8rem;
   cursor: pointer;
 }
-.prof .form-prof .form .form-esquerdo .input-foto img {
+.prof .form__prof__input-foto img {
   height: 120px;
   width: 120px;
   border-radius: 50%;
 }
-.prof .form-prof .form .form-esquerdo .input {
+.prof .form__prof__input {
   position: relative;
   width: 100%;
   padding: 0.2rem 0.5rem;
   box-shadow: 0 3px 3px -3px #444;
 }
-.prof .form-prof .form .form-esquerdo .input input {
+.prof .form__prof__input input {
   width: 100%;
   border: none;
   font-size: 1rem;
 }
-.prof .form-prof .form .form-esquerdo .input input:focus {
+.prof .form__prof__input input:focus {
   outline: none;
 }
-.prof .form-prof .form .form-esquerdo .input input:valid + p {
+.prof .form__prof__input input:valid + p {
   transform: translateY(-160%);
   font-size: 0.8rem;
 }
-.prof .form-prof .form .form-esquerdo .input p {
+.prof .form__prof__placeholder {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   color: #aaa;
   pointer-events: none;
 }
-.prof .form-prof .form .form-esquerdo .select-cores {
+.prof .form__prof__select-cores {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.prof .form-prof .form .form-esquerdo .select-cores .cores {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-.prof .form-prof .form .form-esquerdo .select-cores .cores input[type=radio], .prof .form-prof .form .form-esquerdo .select-cores .cores input[type=color] {
-  display: none;
-}
-.prof .form-prof .form .form-esquerdo .select-cores .cores input[type=radio]:checked + label {
-  border: 1px solid #000;
-}
-.prof .form-prof .form .form-esquerdo .select-cores .cores .cores {
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.prof .form-prof .form .form-esquerdo .select-cores .cores .azul {
-  background-color: #00beef;
-}
-.prof .form-prof .form .form-esquerdo .select-cores .cores .vermelho {
-  background-color: #f34;
-}
-.prof .form-prof .form .form-esquerdo .select-cores .cores .verde {
-  background-color: #beff00;
-}
-.prof .form-prof .form .form-esquerdo .select-cores .cores .amarelo {
-  background-color: #ff0;
-}
-.prof .form-prof .form .form-esquerdo .select-cores .cores .roxo {
-  background-color: #be00ff;
-}
-.prof .form-prof .form .form-esquerdo .select-cores .cores .newColor {
-  text-align: center;
-  font-size: 1rem;
-  line-height: 15px;
-  cursor: pointer;
-}
-.prof .form-prof .form .btns-form {
+.prof .form__prof__btns {
   width: 100%;
   display: flex;
   gap: 60px;
 }
-.prof .form-prof .form .btns-form button {
+.prof .form__prof__btns button {
   width: 100px;
   padding: 0.3rem 0;
   border-radius: 5px;
 }
-.prof .form-prof .form .btns-form button:hover {
+.prof .form__prof__btns button:hover {
   transform: translateY(-3px);
 }
-.prof .form-prof .form .btns-form .btn-cancelar {
+.prof .form__prof__btns__cancelar {
   background-color: #aaa;
   color: #fff;
 }
-.prof .form-prof .form .btns-form .btn-submit {
+.prof .form__prof__btns__submit {
   background: linear-gradient(to left, #7e2da7, #e53f71);
   color: #fff;
 }
-.prof .form-prof .form .form-direito {
+.prof .form__prof__direito {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
-.prof .form-prof .form .form-direito .select-dias {
+.prof .form__prof__select-dias {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.prof .form-prof .form .form-direito .select-dias .div-dias {
+.prof .form__prof__div-dias {
   display: flex;
   gap: 10px;
 }
-.prof .form-prof .form .form-direito .select-dias .div-dias .dia input[type=checkbox] {
+.prof .form__prof__input-dia input[type=checkbox] {
   display: none;
 }
-.prof .form-prof .form .form-direito .select-dias .div-dias .dia input[type=checkbox]:checked + label {
+.prof .form__prof__input-dia input[type=checkbox]:checked + label {
   background: #7e2da7;
   color: #fff;
   border: 1px solid #7e2da7;
   transition: 0s;
 }
-.prof .form-prof .form .form-direito .select-dias .div-dias .dia label {
+.prof .form__prof__input-dia label {
   color: #54236c;
   padding: 0.1rem 0.8rem;
   border: 1px solid #7e2da7;
   border-radius: 10px;
   cursor: pointer;
 }
-.prof .show {
+
+.show {
   display: block;
 }
-.prof .hidden {
+
+.hidden {
   display: none;
 }
 

@@ -13,31 +13,31 @@ import { Link } from 'react-router-dom'
 const Aside = () => {
   return (
     <aside className='aside'>
-        <h1>SOC</h1>
-        <ul>
-            <div className='aside-wrapper'>
-                <li>
-                    <Link to="/home" className='aside-items'>
-                    <IoHome className='items-icons'/> 
+        <h1 className='aside__logo'>SOC</h1>
+        <ul className='aside__list'>
+            <div className='aside__div'>
+                <li className='aside__items'>
+                    <Link to="/home" className='aside__items__link'>
+                    <IoHome className='aside__icons'/> 
                     <p>Inicio</p>
                     </Link>                  
                 </li>
-                <li>
-                    <Link to="/prof" className='aside-items'>
-                    <FaChalkboardTeacher className='items-icons'/> 
+                <li className='aside__items'>
+                    <Link to="/prof" className='aside__items__link'>
+                    <FaChalkboardTeacher className='aside__icons'/> 
                     <p>Professores</p>
                     </Link>                  
                 </li>
-                <li>
-                    <Link className='aside-items'>
-                        <FaCircleUser className='items-icons'/>
+                <li className='aside__items'>
+                    <Link className='aside__items__link'>
+                        <FaCircleUser className='aside__icons'/>
                         <p>Conta</p>
                     </Link>
                 </li>
             </div>
-            <div className='aside-wrapper'>
-                <li className='aside-items'>
-                    <CgLogOut className='items-icons'/> 
+            <div className='aside__div'>
+                <li className='aside__items__link'>
+                    <CgLogOut className='aside__icons'/> 
                     <p>Sair</p>
                 </li>
             </div>

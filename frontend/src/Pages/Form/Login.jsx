@@ -30,43 +30,45 @@ const Login = () => {
     <div className='login'>
         <NavForm/>
         <div className='form flex'>
-          <h1>login</h1>
+          <h1 className='form__title'>login</h1>
           <form className='flex'>
-            <div className='input-wrapper'>
-              <div className='form-input input-cod'>
+            <div className='form__div'>
+              <div className='form__items input-cod'>
                 <PiBarcodeBold className='icones'/>
-                <div className='input'>
+                <div className='form__items__input'>
                   <input type="text" name="" id="" required/>
-                  <p>Cód. ETEC</p>
+                  <p className='form__items__placeholder'>Cód. ETEC</p>
                 </div>             
               </div>
-              <div className='form-input input-login'>
+              <div className='form__items input-login'>
                 <BiSolidUser className='icones'/>
-                <div className="input">
+                <div className='form__items__input'>
                   <input type="text" name="" id="" required/>
-                  <p>Nome Usuário</p>
+                  <p className='form__items__placeholder'>Nome Usuário</p>
                 </div>
               </div>
             </div>
-            <div className="form-input input-senha">
+            <div className="form__items input-senha">
               <RiLockPasswordLine className='icones'/>
-              <div className="input">
+              <div className='form__items__input'>
                 <input type={mostrarSenha} name="" id="" required/>
-                <p>Senha</p>
+                <p className='form__items__placeholder'>Senha</p>
               </div>
               <button className='btnTransparente' onClick={verSenha} type="button">{senhaView}</button>
             </div>
-            <Link className="link" to="/cadastro"><p>Não tem uma conta? Crie agora mesmo</p></Link>
-            <button className='form-btn'>Entrar</button>
+            <Link className="form__link" to="/cadastro">
+              <p>Não tem uma conta? Crie agora mesmo</p>
+            </Link>
+            <button className='form__btn__submit'>Entrar</button>
           </form>
-          <div className="extra flex">
-            <div className="hr">
-              <hr />
+          <div className="form__extra flex">
+            <div className="form__extra__hr">
+              <hr className='form__hr'/>
               <p>Conheça mais</p>
             </div>
-            <div className="link-extra">
+            <div className="form__redes-sociais">
               <a target="_blank" href="https://github.com/AurorinhaBoreal/SOC">
-                <FaGithub className='link-icon'/>
+                <FaGithub className='form__redes-sociais__icon'/>
               </a>
             </div>
           </div>

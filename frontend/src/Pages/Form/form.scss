@@ -18,97 +18,98 @@ $degrade: linear-gradient(to left, #7e2da7, #e53f71);
         padding: 3rem 3rem;
         border-radius: 5px;
 
-        h1{
-            color: $corEscura;
+        &__title{
+                color: $corEscura;
         }
         
         & > form{
             gap: 30px ;
+        }
 
-            .form-input{
-                background-color: $corBranco;
-                width: 100%;
+        &__items{
+            background-color: $corBranco;
+            width: 100%;
+            padding: .8rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 3px 3px -3px #444;
 
-                padding: .8rem 1rem;
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                box-shadow: 0 3px 3px -3px #444;
-
-                .input{
-                    position: relative;
-                    width: 100%;
-
-                    input{
-                        color: $corEscura;
-                        width: 100%;
-                        border: none;
-                        font-size: 1rem;
-    
-                        &:focus{
-                            outline: none;
-                        }
-
-                        &:valid + p{
-                            transform: translateY(-160%);
-                            font-size: .8rem;
-                        }                                       
-                    }
-
-                    p{
-                        position: absolute;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        color: #aaa;
-                        pointer-events: none;
-                    }
-                }           
-            }
-
-            .input-wrapper{
-                width: 100%;
-                display: flex;
-                justify-content: space-between;
-
-                .form-input{
-                    width: 45%;
-                }
-            }
-
-            hr{
-                background: $degrade;
-                height: 2px;
-                width: 100%;
-            }
-
-            .link{
-                color: $corEscura;
+            &__input{
                 position: relative;
-                align-self: self-end;
+                width: 100%;
 
-                p{
-                    font-size: .8rem;
-                }   
-
-                p::after{
-                    content: '';
-                    height: 2px;
-                    width: 0px;
-                    position: absolute;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    bottom: -5px;
-                    transition: .3s;
-                }
-
-                &:hover p::after{
+                input{
+                    color: $corEscura;
                     width: 100%;
-                    background-color: #e53f71;
-                }
+                    border: none;
+                    font-size: 1rem;
+
+                    &:focus{
+                        outline: none;
+                    }
+
+                    &:valid + p{
+                        transform: translateY(-160%);
+                        font-size: .8rem;
+                    }                                       
+                }                   
+            } 
+
+            &__placeholder{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #aaa;
+                pointer-events: none;
+            }          
+        }
+
+        &__div{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+
+            .form__items{
+                width: 100%;
             }
         }
 
-        .form-btn{
+        &__hr{
+                background: $degrade;
+                height: 2px;
+                width: 100%;
+        }
+
+        &__link{
+            color: $corEscura;
+            position: relative;
+            align-self: self-end;
+
+            p{
+                    font-size: .8rem;
+            }   
+
+            p::after{
+                content: '';
+                height: 2px;
+                width: 0px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -5px;
+                transition: .3s;
+            }
+
+            &:hover p::after{
+                width: 100%;
+                background-color: #e53f71;
+            }
+        }
+        
+
+        &__btn__submit{
             background: $degrade;
             color: $corBranco;
             width: 100%;
@@ -125,11 +126,11 @@ $degrade: linear-gradient(to left, #7e2da7, #e53f71);
             }
         }
 
-        .extra{
+        &__extra{
             width: 100%;
             gap: 30px;
 
-            .hr{
+            &__hr{
                 position: relative;
                 width: 100%;
 
@@ -147,179 +148,18 @@ $degrade: linear-gradient(to left, #7e2da7, #e53f71);
                     background-color: $corBranco;
                     padding: 1rem;
                 }
-            }
+            }      
+        }
+        
+        &__redes-sociais{
 
-            .link-extra{
 
-                a{
-                    .link-icon{
-                        color: #000;
-                        margin: 1rem;
-                        font-size: 2rem;
-                    }
-                }
+            &__icon{
+                color: #000;
+                margin: 1rem;
+                font-size: 2rem;
             }
         }
     }
 }
-
-@media screen and (max-width: 580px) {
-
-    .login, .cadastro{
-        background: $degrade;    
-        height: 100vh;
-        display: grid;
-        place-items: center;
     
-        .form{  
-            background-color: $corBranco;  
-            width: 400px;
-            gap: 40px;
-            padding: 3rem 1rem;
-            border-radius: 5px;
-    
-            h1{
-                color: $corEscura;
-            }
-            
-            & > form{
-                gap: 30px ;
-    
-                .form-input{
-                    background-color: $corBranco;
-                    width: 100%;
-    
-                    padding: .8rem 1rem;
-                    display: flex;
-                    align-items: center;
-                    gap: 10px;
-                    box-shadow: 0 3px 3px -3px #444;
-    
-                    .input{
-                        position: relative;
-                        width: 100%;
-    
-                        input{
-                            color: $corEscura;
-                            width: 100%;
-                            border: none;
-                            font-size: 1rem;
-        
-                            &:focus{
-                                outline: none;
-                            }
-    
-                            &:valid + p{
-                                transform: translateY(-160%);
-                                font-size: .8rem;
-                            }                                       
-                        }
-    
-                        p{
-                            position: absolute;
-                            top: 50%;
-                            transform: translateY(-50%);
-                            color: #aaa;
-                            pointer-events: none;
-                        }
-                    }           
-                }
-    
-                .input-wrapper{
-                    width: 100%;
-                    display: flex;
-                    justify-content: space-between;
-    
-                    .form-input{
-                        width: 45%;
-                    }
-                }
-    
-                hr{
-                    background: $degrade;
-                    height: 2px;
-                    width: 100%;
-                }
-    
-                .link{
-                    color: $corEscura;
-                    position: relative;
-                    align-self: self-end;
-    
-                    p{
-                        font-size: .8rem;
-                    }   
-    
-                    p::after{
-                        content: '';
-                        height: 2px;
-                        width: 0px;
-                        position: absolute;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        bottom: -5px;
-                        transition: .3s;
-                    }
-    
-                    &:hover p::after{
-                        width: 100%;
-                        background-color: #e53f71;
-                    }
-                }
-            }
-    
-            .form-btn{
-                background: $degrade;
-                color: $corBranco;
-                width: 100%;
-                margin-top: 20px;
-                padding: .8rem 3rem;
-                border-radius: 5px;
-                font-weight: 600;
-                position: relative;
-               
-    
-                &:hover{
-                    box-shadow: inset 0px 200px 0 #e53f71;
-                    transition: 1s;
-                }
-            }
-    
-            .extra{
-                width: 100%;
-                gap: 30px;
-    
-                .hr{
-                    position: relative;
-                    width: 100%;
-    
-                    hr{
-                        background: $degrade;
-                        height: 2px;
-                        width: 100%;
-                    }
-        
-                    p{
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        background-color: $corBranco;
-                        padding: 1rem;
-                    }
-                }
-    
-                .link-extra{
-    
-                    a{
-                        .link-icon{
-                            color: #000;
-                            margin: 1rem;
-                            font-size: 2rem;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}

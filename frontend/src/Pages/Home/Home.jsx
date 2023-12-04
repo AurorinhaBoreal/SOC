@@ -23,7 +23,7 @@ const Home = () => {
             <Aside/>
             <div className='container'>
                 <Header>
-                    <button className='btn-criar'>Criar Horário +</button>
+                    <button className='header__home__btn__criar'>Criar Horário +</button>
                 </Header>
                 <div className=''>
 

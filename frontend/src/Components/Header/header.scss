@@ -5,13 +5,13 @@ $corRosa: #e53f71;
 $corBranco: #fff;
 $degrade: linear-gradient(to left, #7e2da7, #e53f71);
 
-.header{
+.header__home{
     width: 100%;
     display: flex;
     justify-content: end;
     padding: 1rem 2rem;
 
-    .btn-criar{
+    &__btn__criar{
         background: $degrade;
         color: $corBranco;
         padding: .5rem 1rem;
