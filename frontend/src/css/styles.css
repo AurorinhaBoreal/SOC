@@ -9,8 +9,7 @@
   left: 0;
 }
 .header__form__logo {
-  display: flex;
-  color: #fff;
+  width: 100px;
 }
 .header__form__list {
   display: flex;

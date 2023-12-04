@@ -2,11 +2,13 @@ import React from 'react'
 import '../../css/styles.css'
 import { Link } from 'react-router-dom'
 
+import logo from '../../Assets/Logo SOC.png'
+
 const NavForm = () => {
   return (
     <header className='header__form'>
       <div className='header__form__logo'>
-        <h1>SOC</h1>
+        <img src={logo} alt="Logo SOC" className='header__form__logo'/>
       </div>
       <nav className='header__form__nav'>
         <ul className='header__form__list'>
