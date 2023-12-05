@@ -6,8 +6,8 @@ async function connect(){
   return await mysql2.createConnection({
     host:'localhost', //<-
     port: 3306, //<-
-    password: 'root1234', //<-
-    database:'DB_soc',
+    password: 'root', //<-
+    database:'db_soc',
     user:'root', //<-
   })
 }

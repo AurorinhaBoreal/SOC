@@ -39,7 +39,7 @@ const Cadastro = () => {
       return alert("Senhas não coincidem!")
     }
 
-    else if (password < 8) {
+    else if (password < 10) {
       return alert("Insira uma senha com mais de 10 digitos!")
     }
 

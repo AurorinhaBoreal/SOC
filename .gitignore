@@ -1,8 +1,6 @@
 # DAYABASE CONFIGURATION
-/connectmysql.js
+api/src/repository/connectmysql.js
 
-# GENERAL
-teste_BD.sql
 
 ### Node ###
 # Logs

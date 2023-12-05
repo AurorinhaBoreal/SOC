@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { CirclePicker } from 'react-color';
 import '../../css/styles.css'
+import API from '../../API';
 import Aside from '../../Components/Aside/Aside'
 import Header from '../../Components/Header/Header'
 import image from '../../Assets/profile.png'
@@ -32,6 +33,28 @@ const Prof = () => {
     console.log(currentColor)
   }
 
+  const [name, setName] = useState(null);
+  const [colorCard, setColorCard] = useState(null);
+
+  async function handleProfCreation(e) {
+    e.preventDefault();
+    if (name < 1) {
+      return alert("Insira um nome!")
+    }
+
+    const dataProf = {name, colorCard}
+
+    try {
+      await API.post('/prof', dataProf);
+
+      alert("Professor Cadastrado com sucesso!")
+      setName("");
+
+    } catch(err) {
+      alert(`Erro ao cadastrar. ${err}`)
+    }
+  }
+
   return (
     <div className='prof'>
         <Aside/>
@@ -42,15 +65,16 @@ const Prof = () => {
           </Header>
         </div>
         <div className={show} style={{boxShadow: `0 5px 5px 5px ${currentColor}`}}>
-          <form>
+          <form onSubmit={handleProfCreation}>
             <div className='form__prof__esquerdo'>
               <div className='form__prof__input-foto'>
                 <input type="file" id='foto' onChange={getFile}/>
-                <img src={file} id='profile-pic'/>
+                <img src={file} id='profile-pic' alt='default-pic'/>
                 <label for='foto' id='input-file' accept="image/jpeg, image/png, image/jpg">Colocar Imagem</label>
               </div>
               <div className="form__prof__input">
-                <input type='text' required/>
+                <input type='text' required 
+                value={name} onChange={(e)=> setName(e.target.value)}/>
                 <p className='form__prof__placeholder'>Nome</p>
               </div>
               <div className='form__prof__select-cores'>
@@ -58,6 +82,7 @@ const Prof = () => {
                 <div className='form__prof__select-cores__items'>
                   <CirclePicker 
                   onChangeComplete={handleOnChange}/>
+                  value={colorCard} onChange={(e)=> setColorCard(e.target.value)}
                 </div>
               </div>
               <div className='form__prof__btns'>
