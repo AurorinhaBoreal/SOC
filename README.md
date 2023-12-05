@@ -6,9 +6,6 @@
     <a href='https://github.com/Arthur-Ruas' style='text-decoration: none'>
         <img width="30" height="30" style='margin: 0px 5px' src='./mdAssets/github.png'>
     </a>
-    <a href='' style='text-decoration: none'>
-        <img width="30" height="30" style='margin: 0px 5px' src='./mdAssets/linkedin.png'>
-    </a> 
 </div>
 
 <div align='center' style='margin: 20px'>
@@ -23,29 +20,20 @@
 
 <div align='center' style='margin: 20px'>
     <p style='font-size: 20px'>Giovanna de Almeida Silva</p>
-    <a href='' style='text-decoration: none'>
+    <a href='http://www.linkedin.com/in/giovanna-almeida-6a9416270' style='text-decoration: none'>
         <img width="30" height="30" style='margin: 0px 5px' src='./mdAssets/github.png'>
     </a> 
-    <a href='' style='text-decoration: none'>
+    <a href='http://github.com/GiohAlss' style='text-decoration: none'>
         <img  width="30" height="30" style='margin: 0px 5px' src='./mdAssets/linkedin.png'>
     </a> 
 </div>
 
 <div align='center' style='margin: 20px'>
     <p style='font-size: 20px'>Igor de Moura Nascimento</p>
-    <a href='' style='text-decoration: none'>
-        <img width="30" height="30" style='margin: 0px 5px' src='./mdAssets/github.png'>
-    </a> 
-    <a href='' style='text-decoration: none'>
-        <img  width="30" height="30" style='margin: 0px 5px' src='./mdAssets/linkedin.png'>
-    </a> 
 </div>
 
 <div align='center' style='margin: 20px'>
     <p style='font-size: 20px'>Maria Livia Mendes de Abreu</p>
-    <a href='' style='text-decoration: none'>
-        <img width="30" height="30" style='margin: 0px 5px' src='./mdAssets/github.png'>
-    </a> 
     <a href='https://www.linkedin.com/in/lívia-mendes-8ba652197/' style='text-decoration: none'>
         <img  width="30" height="30" style='margin: 0px 5px' src='./mdAssets/linkedin.png'>
     </a> 
