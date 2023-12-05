@@ -1,5 +1,5 @@
 # DAYABASE CONFIGURATION
-api/src/repository/connectmysql.js
+connectmysql.js
 
 
 ### Node ###
