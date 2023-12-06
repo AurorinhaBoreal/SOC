@@ -1,7 +1,7 @@
 import database from '../repository/connectmysql.js';
 
 async function createTeacher(name, colorCard){
-  const sql = `insert into tb_prof (name, colorCard) 
+  const sql = `insert into tb_prof (nome, corCard) 
                values(?,?)`;
 
   const dataProf = [name, colorCard];
@@ -11,4 +11,4 @@ async function createTeacher(name, colorCard){
   conn.end();
 }
 
-export default {createProf};
+export default {createTeacher};

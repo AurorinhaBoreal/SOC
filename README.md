@@ -1,6 +1,5 @@
 # SOC - Schedule Organizing System
 
-
 <div align='center'>
     <p style='font-size: 20px'> Arthur Ruas Félix Gonçalves</p> 
     <a href='https://github.com/Arthur-Ruas' style='text-decoration: none'>

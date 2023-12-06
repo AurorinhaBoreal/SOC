@@ -5,7 +5,7 @@ const routes = express.Router()
 routes.post('/', async (request, response) => {
     const {name, colorCard} = request.body;
 
-    const user = await db.handleLogin(name, colorCard);
+    const user = await db.createTeacher(name, colorCard);
 
 })
 

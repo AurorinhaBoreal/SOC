@@ -49,6 +49,7 @@ const Prof = () => {
 
       alert("Professor Cadastrado com sucesso!")
       setName("");
+      setColorCard("");
 
     } catch(err) {
       alert(`Erro ao cadastrar. ${err}`)
@@ -81,8 +82,8 @@ const Prof = () => {
                 <h4 className='select-text'>Selecione a cor do card</h4>
                 <div className='form__prof__select-cores__items'>
                   <CirclePicker 
-                  onChangeComplete={handleOnChange}/>
-                  value={colorCard} onChange={(e)=> setColorCard(e.target.value)}
+                  onChangeComplete={handleOnChange}
+                  value={colorCard} onChange={(e)=> setColorCard(currentColor)}/>
                 </div>
               </div>
               <div className='form__prof__btns'>
