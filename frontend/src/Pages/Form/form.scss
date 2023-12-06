@@ -1,30 +1,89 @@
-$corPrimaria: #7e2da7;
-$corEscura: #54236c;
-$corClara: #ebdcf1;  
-$corRosa: #e53f71;
+$corLaranja: #fe7f4a;
+$corAzul: #0f499d;
+$corRosa: #ff3f64;  
+$corRoxo: #5b1788;
 $corBranco: #fff;
-$degrade: linear-gradient(to left, #7e2da7, #e53f71);
+$corPreto: #000;
+$degrade: linear-gradient(to left, #ffbe46, #f43e4b);
 
 .login, .cadastro{
-    background: $degrade;    
+    background-image: url(../Assets/blob-scene-haikei.png);
+    background-size: cover;    
+    background-repeat: no-repeat;
     min-height: 100vh;
     display: grid;
     place-items: center;
+    padding: 3rem 10rem;
 
     .form{  
-        background-color: $corBranco;  
-        width: 500px;
+        background-color: $corBranco; 
+        height: 100%; 
+        width: 100%;
+        display: flex;
         gap: 40px;
-        padding: 3rem 3rem;
         border-radius: 5px;
+        box-shadow: 0px 5px 5px #aaa;
+        overflow: hidden;
+
+        &__esquerdo{
+            height: 100%;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;               
+        }
+
+        &__form{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 40px;
+            padding: 0 6rem; 
+
+            & > form{
+                gap: 30px ;
+            }
+        }
+
+        &__direito{
+            position: relative;
+            background-image: url(../Assets/formBG.jpg);
+            background-size: cover;
+            background-position: right;
+            height: 100%;
+            width: 50%;
+
+            &__header{
+                position: absolute;
+                top: 0;
+                right: 0;
+                display: flex;
+                justify-content: end;
+                padding: 1rem 1rem;
+
+                img{
+                    height: 50px;
+                }
+            }
+
+            &__conteudo{
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &__texto{
+                color: $corBranco;
+                text-align: center;
+                font-size: 4rem;
+                text-shadow: 0 2px #444;
+            }        
+        }
 
         &__title{
-                color: $corEscura;
-        }
-        
-        & > form{
-            gap: 30px ;
-        }
+            color: $corPreto;
+        }    
 
         &__items{
             background-color: $corBranco;
@@ -40,7 +99,7 @@ $degrade: linear-gradient(to left, #7e2da7, #e53f71);
                 width: 100%;
 
                 input{
-                    color: $corEscura;
+                    color: $corPreto;
                     width: 100%;
                     border: none;
                     font-size: 1rem;
@@ -55,6 +114,11 @@ $degrade: linear-gradient(to left, #7e2da7, #e53f71);
                     }                                       
                 }                   
             } 
+
+            &__icones{
+                color: $corPreto;
+                font-size: 1.5rem;
+            }
 
             &__placeholder{
                 position: absolute;
@@ -83,12 +147,12 @@ $degrade: linear-gradient(to left, #7e2da7, #e53f71);
         }
 
         &__link{
-            color: $corEscura;
+            color: $corAzul;
             position: relative;
             align-self: self-end;
 
             p{
-                    font-size: .8rem;
+                font-size: .8rem;
             }   
 
             p::after{
@@ -104,7 +168,8 @@ $degrade: linear-gradient(to left, #7e2da7, #e53f71);
 
             &:hover p::after{
                 width: 100%;
-                background-color: #e53f71;
+                background-color: $corLaranja;
+                transition: .3s;
             }
         }
         
@@ -146,6 +211,7 @@ $degrade: linear-gradient(to left, #7e2da7, #e53f71);
                     left: 50%;
                     transform: translate(-50%, -50%);
                     background-color: $corBranco;
+                    text-align: center;
                     padding: 1rem;
                 }
             }      
@@ -153,11 +219,10 @@ $degrade: linear-gradient(to left, #7e2da7, #e53f71);
         
         &__redes-sociais{
 
-
             &__icon{
                 color: #000;
                 margin: 1rem;
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
         }
     }

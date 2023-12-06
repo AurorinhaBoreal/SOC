@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
 
-@import "./Components/NavForm/navForm.scss";
 @import "./Components/Header/header.scss";
 @import "./Components/Aside/aside.scss";
 @import "./Pages/Form/form.scss";
@@ -44,9 +43,4 @@ button{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
-
-.icones{
-    color: var(--corEscura);
-    font-size: 1.5rem;
 }
