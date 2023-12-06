@@ -17,13 +17,13 @@ select * from tb_user;
 create table tb_prof(
 id		int auto_increment,
 nome	varchar(30),
-colorCard varchar(10),
+corCard varchar(10),
 rm		int,
 
 constraint pk_prof primary key(id)
 );
 
-insert into tb_prof(nome, colorCard, rm) values
+insert into tb_prof(nome, corCard, rm) values
 ("Saiz", "#00beef", "1010"),
 ("Francalino Antonio", "#00beef", "1011"),
 ("Marcos Nogueira", "#00beef", "1111"),
