@@ -1,9 +1,14 @@
-$corPrimaria: #7e2da7;
-$corEscura: #54236c;
-$corClara: #ebdcf1;  
-$corRosa: #e53f71;
+$corLaranja: #fe7f4a;
+$corRosa: #ff3f64; 
+$corRoxo: #5b1788; 
+$corAzul: #0f499d;
+$corAzulClaro: #0197c3;
 $corBranco: #fff;
-$degrade: linear-gradient(to left, #7e2da7, #e53f71);
+$corPreto: #000;
+$cinza: #efefef;
+$cinzaTexto: #aaa;
+$cinzaShadow: #444;
+$degrade: linear-gradient(to left, #ffbe46, #f43e4b);
 
 .aside{
     height: 100vh;
@@ -11,7 +16,7 @@ $degrade: linear-gradient(to left, #7e2da7, #e53f71);
     flex-direction: column;
     gap: 40px;
     padding: 1.5rem 1rem;
-    border-right: 1px solid #444;
+    border-right: 1px solid $cinzaShadow;
 
     &__logo{
         font-size: 1.5rem;
@@ -35,6 +40,7 @@ $degrade: linear-gradient(to left, #7e2da7, #e53f71);
     &__items{
 
         &__link{
+            color: $corLaranja;
             width: 100%;
             display: flex;
             align-items: center;
@@ -44,12 +50,14 @@ $degrade: linear-gradient(to left, #7e2da7, #e53f71);
             cursor: pointer;
     
             &:hover{
-                background-color: $corClara;
+                color: $corBranco;
+                background-color: $corLaranja;
             }
         }           
     }
 
     &__icons{
         font-size: 1.2rem;
+        transition: 0s;
     }
 }

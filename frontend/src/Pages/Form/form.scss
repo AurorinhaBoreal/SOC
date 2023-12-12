@@ -1,9 +1,13 @@
 $corLaranja: #fe7f4a;
+$corRosa: #ff3f64; 
+$corRoxo: #5b1788; 
 $corAzul: #0f499d;
-$corRosa: #ff3f64;  
-$corRoxo: #5b1788;
+$corAzulClaro: #0197c3;
 $corBranco: #fff;
 $corPreto: #000;
+$cinza: #efefef;
+$cinzaTexto: #aaa;
+$cinzaShadow: #444;
 $degrade: linear-gradient(to left, #ffbe46, #f43e4b);
 
 .login, .cadastro{
@@ -22,7 +26,7 @@ $degrade: linear-gradient(to left, #ffbe46, #f43e4b);
         display: flex;
         gap: 40px;
         border-radius: 5px;
-        box-shadow: 0px 5px 5px #aaa;
+        box-shadow: 0px 5px 5px $cinzaTexto;
         overflow: hidden;
 
         &__esquerdo{
@@ -77,7 +81,7 @@ $degrade: linear-gradient(to left, #ffbe46, #f43e4b);
                 color: $corBranco;
                 text-align: center;
                 font-size: 4rem;
-                text-shadow: 0 2px #444;
+                text-shadow: 0 2px $cinzaShadow;
             }        
         }
 
@@ -92,7 +96,7 @@ $degrade: linear-gradient(to left, #ffbe46, #f43e4b);
             display: flex;
             align-items: center;
             gap: 10px;
-            box-shadow: 0 3px 3px -3px #444;
+            box-shadow: 0 3px 3px -3px $cinzaShadow;
 
             &__input{
                 position: relative;
@@ -124,7 +128,7 @@ $degrade: linear-gradient(to left, #ffbe46, #f43e4b);
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
-                color: #aaa;
+                color: $cinzaTexto;
                 pointer-events: none;
             }          
         }
@@ -186,7 +190,7 @@ $degrade: linear-gradient(to left, #ffbe46, #f43e4b);
            
 
             &:hover{
-                box-shadow: inset 0px 200px 0 #e53f71;
+                box-shadow: inset 0px 200px 0 $corAzulClaro;
                 transition: 1s;
             }
         }

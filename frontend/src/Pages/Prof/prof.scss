@@ -1,9 +1,14 @@
-$corPrimaria: #7e2da7;
-$corEscura: #54236c;
-$corClara: #ebdcf1;  
-$corRosa: #e53f71;
+$corLaranja: #fe7f4a;
+$corRosa: #ff3f64; 
+$corRoxo: #5b1788; 
+$corAzul: #0f499d;
+$corAzulClaro: #0197c3;
 $corBranco: #fff;
-$degrade: linear-gradient(to left, #7e2da7, #e53f71);
+$corPreto: #000;
+$cinza: #efefef;
+$cinzaTexto: #aaa;
+$cinzaShadow: #444;
+$degrade: linear-gradient(to left, #ffbe46, #f43e4b);
 
 .prof{
     position: relative;
@@ -22,7 +27,7 @@ $degrade: linear-gradient(to left, #7e2da7, #e53f71);
         background-color: #fff;
         padding: 2rem 2rem;
         border-radius: 5px;
-        box-shadow: 0px 5px 10px #aaa;
+        box-shadow: 0px 5px 10px $cinzaTexto;
 
         & > form{
             display: flex;
@@ -30,7 +35,7 @@ $degrade: linear-gradient(to left, #7e2da7, #e53f71);
         }
 
         .select-text{
-                color: #aaa;
+            color: $cinzaTexto;
         }
 
         &__esquerdo{
@@ -70,7 +75,7 @@ $degrade: linear-gradient(to left, #7e2da7, #e53f71);
             position: relative;
             width: 100%;
             padding: .2rem .5rem;
-            box-shadow: 0 3px 3px -3px #444;
+            box-shadow: 0 3px 3px -3px $cinzaShadow;
 
             input{
                 width: 100%;                   
@@ -92,7 +97,7 @@ $degrade: linear-gradient(to left, #7e2da7, #e53f71);
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            color: #aaa;
+            color: $cinzaTexto;
             pointer-events: none;
         }  
     
@@ -118,7 +123,7 @@ $degrade: linear-gradient(to left, #7e2da7, #e53f71);
             }
     
             &__cancelar{
-                background-color: #aaa;
+                background-color: $cinzaTexto;
                 color: $corBranco;             
             }
     
@@ -152,16 +157,16 @@ $degrade: linear-gradient(to left, #7e2da7, #e53f71);
             }
 
             input[type=checkbox]:checked + label{
-                background: $corPrimaria;
+                background: $corAzulClaro;
                 color: $corBranco;
-                border: 1px solid $corPrimaria;
+                border: 1px solid $corAzulClaro;
                 transition: 0s;
             }
 
             label{
-                color: $corEscura;
+                color: $corLaranja;
                 padding: .1rem .8rem;
-                border: 1px solid $corPrimaria;
+                border: 1px solid $corLaranja;
                 border-radius: 10px;
                 cursor: pointer;
             }

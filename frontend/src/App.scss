@@ -6,11 +6,17 @@
 @import "./Pages/Home/home.scss";
 @import "./Pages/Prof/prof.scss";
 
-:root{
-    --corPrimaria: #7e2da7;
-    --corEscura: #54236c;
-    --corClara: #ebdcf1;  
-}
+$corLaranja: #fe7f4a;
+$corRosa: #ff3f64; 
+$corRoxo: #5b1788; 
+$corAzul: #0f499d;
+$corAzulClaro: #0197c3;
+$corBranco: #fff;
+$corPreto: #000;
+$cinza: #efefef;
+$cinzaTexto: #aaa;
+$cinzaShadow: #444;
+$degrade: linear-gradient(to left, #ffbe46, #f43e4b);
 
 *{
     margin: 0;
@@ -31,7 +37,7 @@ ul{
 button{
     cursor: pointer;
     border: none;
-    color: var(--corEscura);
+    color: $corLaranja;
 }
 
 .btnTransparente{

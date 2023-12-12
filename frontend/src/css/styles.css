@@ -6,7 +6,7 @@
   padding: 1rem 2rem;
 }
 .header__home__btn__criar {
-  background: linear-gradient(to left, #7e2da7, #e53f71);
+  background: linear-gradient(to right, #ffbe46, #f43e4b);
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 5px;
@@ -37,6 +37,7 @@
   flex-direction: column;
 }
 .aside__items__link {
+  color: #fe7f4a;
   width: 100%;
   display: flex;
   align-items: center;
@@ -46,10 +47,12 @@
   cursor: pointer;
 }
 .aside__items__link:hover {
-  background-color: #ebdcf1;
+  color: #fff;
+  background-color: #fe7f4a;
 }
 .aside__icons {
   font-size: 1.2rem;
+  transition: 0s;
 }
 
 .login, .cadastro {
@@ -207,7 +210,7 @@
   position: relative;
 }
 .login .form__btn__submit:hover, .cadastro .form__btn__submit:hover {
-  box-shadow: inset 0px 200px 0 #e53f71;
+  box-shadow: inset 0px 200px 0 #0197c3;
   transition: 1s;
 }
 .login .form__extra, .cadastro .form__extra {
@@ -287,7 +290,7 @@
   display: none;
 }
 .prof .form__prof__input-foto label {
-  background: linear-gradient(to left, #7e2da7, #e53f71);
+  background: linear-gradient(to left, #ffbe46, #f43e4b);
   color: #fff;
   padding: 0.3rem 0.8rem;
   border-radius: 5px;
@@ -347,7 +350,7 @@
   color: #fff;
 }
 .prof .form__prof__btns__submit {
-  background: linear-gradient(to left, #7e2da7, #e53f71);
+  background: linear-gradient(to left, #ffbe46, #f43e4b);
   color: #fff;
 }
 .prof .form__prof__direito {
@@ -368,15 +371,15 @@
   display: none;
 }
 .prof .form__prof__input-dia input[type=checkbox]:checked + label {
-  background: #7e2da7;
+  background: #0197c3;
   color: #fff;
-  border: 1px solid #7e2da7;
+  border: 1px solid #0197c3;
   transition: 0s;
 }
 .prof .form__prof__input-dia label {
-  color: #54236c;
+  color: #fe7f4a;
   padding: 0.1rem 0.8rem;
-  border: 1px solid #7e2da7;
+  border: 1px solid #fe7f4a;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -387,12 +390,6 @@
 
 .hidden {
   display: none;
-}
-
-:root {
-  --corPrimaria: #7e2da7;
-  --corEscura: #54236c;
-  --corClara: #ebdcf1;
 }
 
 * {
@@ -414,7 +411,7 @@ ul {
 button {
   cursor: pointer;
   border: none;
-  color: var(--corEscura);
+  color: #fe7f4a;
 }
 
 .btnTransparente {
