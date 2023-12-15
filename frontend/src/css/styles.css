@@ -55,6 +55,184 @@
   transition: 0s;
 }
 
+.card-prof {
+  width: 300px;
+  border-radius: 5px;
+}
+.card-prof__top {
+  position: relative;
+  height: 100px;
+  width: 100%;
+  padding: 1rem 0.5rem;
+  margin-bottom: 5rem;
+}
+.card-prof__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 120px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+}
+.card-prof__nome {
+  font-size: 1rem;
+}
+
+.form__prof {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 2rem 2rem;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px #aaa;
+  z-index: 1000;
+}
+.form__prof > form {
+  display: flex;
+  gap: 30px;
+}
+.form__prof .select-text {
+  color: #aaa;
+}
+.form__prof__esquerdo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form__prof__input-foto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.form__prof__input-foto input[type=file] {
+  display: none;
+}
+.form__prof__input-foto label {
+  background: linear-gradient(to right, #ffbe46, #f43e4b);
+  color: #fff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.form__prof__input-foto img {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+}
+.form__prof__input {
+  position: relative;
+  width: 100%;
+  padding: 0.2rem 0.5rem;
+  box-shadow: 0 3px 3px -3px #444;
+}
+.form__prof__input input {
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+}
+.form__prof__input input:focus {
+  outline: none;
+}
+.form__prof__input input:valid + p {
+  transform: translateY(-160%);
+  font-size: 0.8rem;
+}
+.form__prof__placeholder {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  pointer-events: none;
+}
+.form__prof__select-cores {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form__prof__btns {
+  width: 100%;
+  display: flex;
+  gap: 60px;
+}
+.form__prof__btns button {
+  width: 100px;
+  padding: 0.3rem 0;
+  border-radius: 5px;
+}
+.form__prof__btns button:hover {
+  transform: translateY(-3px);
+}
+.form__prof__btns__cancelar {
+  background-color: #aaa;
+  color: #fff;
+}
+.form__prof__btns__submit {
+  background: linear-gradient(to right, #ffbe46, #f43e4b);
+  color: #fff;
+}
+.form__prof__direito {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.form__prof__select-dias {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form__prof__div-dias {
+  display: flex;
+  gap: 10px;
+}
+.form__prof__input-dia input[type=checkbox] {
+  display: none;
+}
+.form__prof__input-dia input[type=checkbox]:checked + label {
+  background: #0197c3;
+  color: #fff;
+  border: 1px solid #0197c3;
+  transition: 0s;
+}
+.form__prof__input-dia label {
+  color: #fe7f4a;
+  padding: 0.1rem 0.8rem;
+  border: 1px solid #fe7f4a;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.form__prof__select-materias {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form__prof__div-materias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.form__prof__input-materias input[type=checkbox] {
+  display: none;
+}
+.form__prof__input-materias input[type=checkbox]:checked + label {
+  background: #0197c3;
+  color: #fff;
+  border: 1px solid #0197c3;
+  transition: 0s;
+}
+.form__prof__input-materias label {
+  color: #fe7f4a;
+  padding: 0.1rem 0.8rem;
+  border: 1px solid #fe7f4a;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
 .login, .cadastro {
   background-image: url(../Assets/blob-scene-haikei.png);
   background-size: cover;
@@ -257,131 +435,11 @@
 .prof .container {
   width: 100%;
 }
-.prof .form__prof {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  padding: 2rem 2rem;
-  border-radius: 5px;
-  box-shadow: 0px 5px 10px #aaa;
-}
-.prof .form__prof > form {
+.prof__div {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
-}
-.prof .form__prof .select-text {
-  color: #aaa;
-}
-.prof .form__prof__esquerdo {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.prof .form__prof__input-foto {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 10px;
-}
-.prof .form__prof__input-foto input[type=file] {
-  display: none;
-}
-.prof .form__prof__input-foto label {
-  background: linear-gradient(to left, #ffbe46, #f43e4b);
-  color: #fff;
-  padding: 0.3rem 0.8rem;
-  border-radius: 5px;
-  font-size: 0.8rem;
-  cursor: pointer;
-}
-.prof .form__prof__input-foto img {
-  height: 120px;
-  width: 120px;
-  border-radius: 50%;
-}
-.prof .form__prof__input {
-  position: relative;
-  width: 100%;
-  padding: 0.2rem 0.5rem;
-  box-shadow: 0 3px 3px -3px #444;
-}
-.prof .form__prof__input input {
-  width: 100%;
-  border: none;
-  font-size: 1rem;
-}
-.prof .form__prof__input input:focus {
-  outline: none;
-}
-.prof .form__prof__input input:valid + p {
-  transform: translateY(-160%);
-  font-size: 0.8rem;
-}
-.prof .form__prof__placeholder {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #aaa;
-  pointer-events: none;
-}
-.prof .form__prof__select-cores {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.prof .form__prof__btns {
-  width: 100%;
-  display: flex;
-  gap: 60px;
-}
-.prof .form__prof__btns button {
-  width: 100px;
-  padding: 0.3rem 0;
-  border-radius: 5px;
-}
-.prof .form__prof__btns button:hover {
-  transform: translateY(-3px);
-}
-.prof .form__prof__btns__cancelar {
-  background-color: #aaa;
-  color: #fff;
-}
-.prof .form__prof__btns__submit {
-  background: linear-gradient(to left, #ffbe46, #f43e4b);
-  color: #fff;
-}
-.prof .form__prof__direito {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-.prof .form__prof__select-dias {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.prof .form__prof__div-dias {
-  display: flex;
-  gap: 10px;
-}
-.prof .form__prof__input-dia input[type=checkbox] {
-  display: none;
-}
-.prof .form__prof__input-dia input[type=checkbox]:checked + label {
-  background: #0197c3;
-  color: #fff;
-  border: 1px solid #0197c3;
-  transition: 0s;
-}
-.prof .form__prof__input-dia label {
-  color: #fe7f4a;
-  padding: 0.1rem 0.8rem;
-  border: 1px solid #fe7f4a;
-  border-radius: 10px;
-  cursor: pointer;
+  padding: 3rem;
 }
 
 .show {

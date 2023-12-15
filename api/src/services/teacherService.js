@@ -11,4 +11,16 @@ async function createTeacher(name, colorCard){
   conn.end();
 }
 
-export default {createTeacher};
+async function getTeacher() {
+
+  const sql = `select
+  nome as Nome, corCard as corCard
+  from tb_prof`
+
+  const conn = await database.connect();
+  const [rows] = await conn.query(sql);
+  conn.end();
+  return rows;
+}
+
+export default {createTeacher, getTeacher};

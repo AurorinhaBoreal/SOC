@@ -24,16 +24,16 @@ constraint pk_prof primary key(id)
 );
 
 insert into tb_prof(nome, corCard, rm) values
-("Saiz", "#00beef", "1010"),
-("Francalino Antonio", "#00beef", "1011"),
-("Marcos Nogueira", "#00beef", "1111"),
-("Luiz", "#00beef", "1212"),
-("Emerson", "#00beef", "1313"),
-("Marcos Costa", "#00beef", "1414"),
+("Saiz", "#607d8b", "1010"),
+("Francalino Antonio", "#ff9800", "1011"),
+("Marcos Nogueira", "#f44336", "1111"),
+("Luiz", "#00bcd4", "1212"),
+("Emerson", "#4caf50", "1313"),
+("Marcos Costa", "#ffeb3b", "1414"),
 
-("Wilhelm", "#00beef", "4204"),
-("Alcindo", "#00beef", "1911"),
-("Raquel", "#00beef", "0000");
+("Wilhelm", "#cddc39", "4204"),
+("Alcindo", "#795548", "1911"),
+("Raquel", "#9c27b0", "0000");
 
 select * from tb_prof;
 
@@ -64,6 +64,7 @@ insert into tb_modulos(descricao) values
 create table tb_materias(
 id			int	auto_increment,
 nome		varchar(50),
+sigla		varchar(10),
 id_curso	int,
 id_modulo	int,
 
@@ -72,25 +73,25 @@ constraint fk_curso foreign key (id_curso) references tb_cursos(id),
 constraint fk_modulo foreign key(id_modulo) references tb_modulos(id)
 );
 
-insert into tb_materias(nome, id_curso, id_modulo) values
+insert into tb_materias(nome, sigla,id_curso, id_modulo) values
 /*Primeiro Bimestre*/
-("Programação WEB 1","1","1"),
-("Fundamentos da Informática","1","1"),
-("Programação e Algoritimos","1","1"),
-("Design Digital","1","1"),
-("Operação de Software Aplicativo","1","1"),
-("Banco de Dados 1","1","1"),
-("Ética e Cidadania Organizacional","1","1"),
-("Inglês Instrumental","1","1"),
+("Programação WEB 1","PW1","1","1"),
+("Fundamentos da Informática","FI","1","1"),
+("Programação e Algoritimos","PA","1","1"),
+("Design Digital","DD","1","1"),
+("Operação de Software Aplicativo","OSA","1","1"),
+("Banco de Dados 1","BD1","1","1"),
+("Ética e Cidadania Organizacional","ECO","1","1"),
+("Inglês Instrumental","II","1","1"),
 
 /*Segundo Bimestre*/
-("Desenvolvimento de Sistemas I","1","2"),
-("Análise e Desenvolvimento de Projetos","1","2"),
-("Banco de Dados II","1","2"),
-("Programação Web II","1","2"),
-("Programação de Aplicativos Mobile","1","2"),
-("Sistemas Embarcados","1","2"),
-("Planejamento de TCC","1","2");
+("Desenvolvimento de Sistemas I","DSI","1","2"),
+("Análise e Desenvolvimento de Projetos","APS","1","2"),
+("Banco de Dados II","BD2","1","2"),
+("Programação Web II","PW2","1","2"),
+("Programação de Aplicativos Mobile","PAM1","1","2"),
+("Sistemas Embarcados","SE","1","2"),
+("Planejamento de TCC","PTCC","1","2");
 
 select * from tb_materias;
 
@@ -220,6 +221,17 @@ inner join tb_prof on tb_prof.id = tb_profDias.id_prof
 inner join tb_dias on tb_dias.id = tb_profDias.id_dia
 inner join tb_bloco on tb_bloco.id = tb_profDias.id_bloco
 order by tb_profDias.id;
+
+select
+  tb_prof.nome as Nome, 
+  tb_prof.corCard as corCard,
+  tb_materias.nome as Materia,
+  tb_dias.nome as Dia
+  from tb_profMaterias
+  inner join tb_prof on tb_prof.id = tb_profMaterias.id_prof
+  inner join tb_materias on tb_materias.id = tb_profMaterias.id_materia
+  inner join tb_profDias on tb_profDias.id_prof = tb_prof.id 
+  inner join tb_dias on tb_dias.id = tb_profDias.id_dia;
 
 create table tb_salas(
 id		int auto_increment,
